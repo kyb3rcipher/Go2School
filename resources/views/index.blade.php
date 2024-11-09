@@ -16,7 +16,7 @@
 <body>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container">
-            <img src="images/banner.png" alt="logo">
+            <img src="images/logo-banner.png" alt="logo">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -71,7 +71,7 @@
 
                     <div class="col-md-4">
                         <div class="icons">
-                            <img src="/assets/img/icons/icons-1.svg" alt="icons">
+                            <img src="images/icons/icon-1.svg" alt="icons">
                         </div>
                         <div class="desc">
                             <h5>Control your students</h5>
@@ -81,7 +81,7 @@
 
                     <div class="col-md-4">
                         <div class="icons">
-                            <img src="/assets/img/icons/icons-2.svg" alt="icons">
+                            <img src="images/icons/icon-2.svg" alt="icons">
                         </div>
                         <div class="desc">
                             <h5>Manage your school</h5>
@@ -91,7 +91,7 @@
 
                     <div class="col-md-4">
                         <div class="icons">
-                            <img src="/assets/img/icons/icons-3.svg" alt="icons">
+                            <img src="images/icons/icon-3.svg" alt="icons">
                         </div>
                         <div class="desc">
                             <h5>Help for parents</h5>
