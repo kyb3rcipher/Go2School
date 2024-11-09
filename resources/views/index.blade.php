@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>{{ config('app.name') }}</title>
+    <title>{{ config('app.name') }} - The future school</title>
 
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="images/logo.svg">
