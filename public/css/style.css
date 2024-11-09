@@ -2,13 +2,22 @@
 
 
 :root {
-    --primary: #FFD33B;
-    --primary-dark: #E9C235;
+    --primary: #FFA43B;
+    --primary-dark: #E97A35;
     --black: #010101;
     --gray-1: #788190;
     --gray-2: #D3D4DB;
     --white: #FFFFFF;
     --body: #FEFEFE;
+}
+
+::selection {
+    color: var(--white);
+    background: var(--primary);
+}
+::-moz-selection {
+    color: var(--white);
+    background: var(--primary);
 }
 
 body {
