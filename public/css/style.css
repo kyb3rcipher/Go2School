@@ -52,7 +52,8 @@ body {
     color: var(--black);
 }
 
-.navbar .btn-outline-secondary {
+/* Header */
+header .navbar .btn-outline-secondary {
     border: 1px solid var(--gray-2);
     color: var(--black);
     font-size: 14px;
@@ -61,17 +62,17 @@ body {
     padding: 10px 16px;
 }
 
-.navbar {
+header .navbar {
     padding: 32px 0;
 }
 
-.nav-link {
+header .nav-link {
     margin-left: 41px;
     font-size: 16px;
     color: var(--gray-1);
 }
 
-.navbar-nav .nav-link.active {
+header .navbar-nav .nav-link.active {
     font-weight: bold;
     color: var(--black);
 }
@@ -192,11 +193,11 @@ footer .copy {
     }
     
     /* Navbar */
-    .navbar {
+    header .navbar {
         padding: 20px 0;
     }
 
-    .nav-link {
+    header .nav-link {
         margin-left: 0;
     }
 
@@ -227,7 +228,10 @@ footer .copy {
 
     /* Footer */
     footer {
-        padding-top: 50px;
-        margin-bottom: 44px;
+        text-align: center;
+    }
+
+    footer #logo {
+        justify-content: center;
     }
 }

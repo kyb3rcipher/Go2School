@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
+<header>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container">
             <img src="images/logo-banner.png" alt="logo">
@@ -25,6 +26,7 @@
                     <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">Pricing</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">FAQs</a></li>
                     <li class="nav-item me-5"><a class="nav-link" href="#">About</a></li>
                     
                     <!--<li class="nav-item dropdown me-5">
@@ -40,6 +42,7 @@
           </div>
         </div>
     </nav>
+</header>
     
     <!-- Hero section -->
     <section class="hero">
@@ -136,28 +139,47 @@
     </section>-->
 
     <!-- Footer section -->
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col md-6">
-                    <div class="row row-cols-1 row-cols-lg-5 g-2 lg-3">
-
-                        <div class="col-md-3">
-                            <div><small><a href="#" class="text-decoration-none">Home</a></small></div>
-                        </div>
-
-                        <div class="col-md-3">
-                            <div><small><a href="#features" class="text-decoration-none">Features</a></small></div>
-                        </div>
-
-                        <div class="col-md-3">
-                            <div><small><a href="#" class="text-decoration-none">About</a></small></div>
-                        </div>
-
-                    </div>
-                </div>
+    <footer class="container">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top">
+            <div class="col mb-3">
+                <a href="/" id="logo" class="d-flex align-items-center mb-3 link-body-emphasis text-decoration-none"><img src="images/logo-banner.png"></a>
+                <p class="text-body-secondary">&copy; 2024 <a href="https://kyb3rcipher.com">Kyb3r Cipher</a></p>
             </div>
-            <div class="copy">&copy; 2024 Kyb3r Cipher</div>
+            <div class="col mb-3"></div>
+      
+            <div class="col mb-3">
+                <h5>Product</h5>
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
+                </ul>
+            </div>
+        
+            <div class="col mb-3">
+                <h5>Platform</h5>
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
+                </ul>
+            </div>
+        
+            <div class="col mb-3">
+                <h5>Policies</h5>
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Terms</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Privacy</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Cookies Settings</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Guidelines</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Licenses</a></li>
+                </ul>
+            </div>
+
         </div>
     </footer>
 
