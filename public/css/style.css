@@ -31,15 +31,6 @@ body {
 
 .btn-primary, .btn-outline-secondary {
     padding: 12px 20px;
-    border-color: var(--primary);
-}
-
-.btn-primary {
-    background-color: var(--primary);
-}
-.btn-primary:hover {
-    background-color: var(--primary-dark);
-    border-color: var(--primary-dark);
 }
 
 .btn-outline-secondary {
