@@ -14,8 +14,6 @@
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-    
-    <!-- Navbar section -->
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container">
             <img src="images/banner.png" alt="logo">

@@ -88,7 +88,7 @@ section.hero .text {
     line-height: 24px;
 }
 
-/* Setup section */
+/* SETUP section */
 section.setup {
     padding: 287px 0;
 }
@@ -129,7 +129,7 @@ section.setup .desc p {
     margin: 0 auto;
 }
 
-/* Information section */
+/* INFORMATION section */
 section.information .text-information {
     padding: 134px 0;
 }
@@ -182,7 +182,7 @@ footer .copy {
         text-align: center;
     }
     
-    /* NAVBAR */
+    /* Navbar */
     .navbar {
         padding: 20px 0;
     }
@@ -190,7 +190,8 @@ footer .copy {
     .nav-link {
         margin-left: 0;
     }
-    /* HERO */
+
+    /* HERO section*/
     section.hero img {
         padding-top: 2.5rem;
     }
@@ -210,7 +211,7 @@ footer .copy {
         margin-left: 0 !important;
     }
 
-    /* SETUP */
+    /* SETUP section */
     section.setup {
         padding: 50px 0;
     }
