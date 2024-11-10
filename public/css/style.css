@@ -89,6 +89,11 @@ section.hero .text {
     line-height: 24px;
 }
 
+.text-header h2 {
+    font-size: 42px;
+    padding: 27px 0;
+}
+
 /* Hero */
 @keyframes bounce {
     0% { transform: translateY(-10px)scaleY(.8) }
@@ -117,8 +122,7 @@ section.setup {
     padding: 100px 0;
 }
 
-section.setup .text-header h3 {
-    font-size: 42px;
+section.setup .text-header h2 {
     font-weight: 700;
     line-height: 48px;
     color: var(--black);
@@ -177,10 +181,16 @@ section.information .info-1 {
     padding: 183px 0;
 }
 
+/* FAQs section */
+section.faqs .text-header h2 {
+    text-decoration: underline;
+    text-decoration-style: wavy;
+    text-decoration-color: var(--primary);
+}
+
 /* FOOTER */
 footer {
-    padding-top: 279px;
-    margin-bottom: 44px;
+    padding-top: 90px;
 }
 
 footer a {
@@ -188,14 +198,6 @@ footer a {
     font-size: 14px;
     color: var(--black);
     line-height: 18px;
-}
-
-footer .copy {
-    margin-top: 32px;
-    font-size: 14px;
-    color: var(--gray-1);
-    line-height: 17px;
-    font-weight: 400;
 }
 
 /* RESPONSIVE */
