@@ -44,7 +44,7 @@
     </nav>
 </header>
     
-    <!-- Hero section -->
+    {{-- Hero --}}
     <section class="hero">
         <div class="container">
             <div class="row">
@@ -64,8 +64,8 @@
         <a id="down-arrow" href="#features"><div></div></a>
     </section>
 
-    <!-- Setup section -->
-    <section id="features" class="setup">
+    {{-- Setup --}}
+    <section id="features" class="features">
         <div class="container">
             <div class="text-header text-center">
                 <h2>The best option</h2>
@@ -109,7 +109,7 @@
         </div>
     </section>
 
-    <!-- Information section -->
+    {{-- Information --}}
     <section class="information">
         <div class="container">
 
@@ -186,8 +186,8 @@
         </div>
     </section>
     
-    
-    <!-- Footer section -->
+
+    {{-- Footer --}}
     <footer class="container">
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top">
             <div class="col mb-3">
@@ -200,9 +200,9 @@
                 <h5>Product</h5>
                 <ul class="nav flex-column">
                     <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
+                    <li class="nav-item mb-2"><a href="#features" class="nav-link p-0 text-body-secondary">Features</a></li>
                     <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
+                    <li class="nav-item mb-2"><a href="#faqs" class="nav-link p-0 text-body-secondary">FAQs</a></li>
                     <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
                 </ul>
             </div>

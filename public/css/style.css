@@ -116,18 +116,18 @@ section.hero #down-arrow div {
     margin: 0 0 3px 10px
 }
 
-/* SETUP section */
-section.setup {
+/* information section */
+section.information {
     padding: 100px 0;
 }
 
-section.setup .text-header h2 {
+section.information .text-header h2 {
     font-weight: 700;
     line-height: 48px;
     color: var(--black);
 }
 
-section.setup .text-header p {
+section.information .text-header p {
     font-size: 18px;
     font-weight: 400;
     line-height: 28px;
@@ -135,11 +135,11 @@ section.setup .text-header p {
     padding: 27px 0;
 }
 
-section.setup .icons {
+section.information .icons {
     padding: 27px 0;
 }
 
-section.setup h5 {
+section.information h5 {
     font-weight: 700;
     font-size: 18px;
     line-height: 24px;
@@ -147,7 +147,7 @@ section.setup h5 {
     padding-bottom: 18px;
 }
 
-section.setup .desc p {
+section.information .desc p {
     font-weight: 400;
     font-size: 13px;
     line-height: 22px;
