@@ -68,18 +68,6 @@ header .navbar-nav .nav-link.active {
     color: var(--black);
 }
 
-/* HERO SECTION */
-section.hero {
-    padding: 80px 0;
-}
-
-section.hero .text {
-    font-weight: 800;
-    font-size: 48px;
-    line-height: 73px;
-    color: var(--black);
-}
-
 .buttons {
     padding-top: 69px;
 }
@@ -94,7 +82,18 @@ section.hero .text {
     padding: 27px 0;
 }
 
-/* Hero */
+/* HERO SECTION */
+section.hero {
+    padding: 80px 0;
+}
+
+section.hero .text {
+    font-weight: 800;
+    font-size: 48px;
+    line-height: 73px;
+    color: var(--black);
+}
+
 @keyframes bounce {
     0% { transform: translateY(-10px)scaleY(.8) }
     100% { transform: translateY(10px)scaleY(1) }
