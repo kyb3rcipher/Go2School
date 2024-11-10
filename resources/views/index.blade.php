@@ -26,7 +26,7 @@
                     <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">Pricing</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">FAQs</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#faqs">FAQs</a></li>
                     <li class="nav-item me-5"><a class="nav-link" href="#">About</a></li>
                     
                     <!--<li class="nav-item dropdown me-5">
@@ -108,14 +108,14 @@
     </section>
 
     <!-- Information section -->
-    <!--<section class="information">
+    <section class="information">
         <div class="container">
 
             <div class="row info-1">
                 <div class="col md-6">
                     <div class="text-information">
-                        <h5>Get more costumer for your bussniess</h5>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi impedit at aspernatur eaque! Blanditiis qui cumque unde voluptatum? Adipisci, autem.</p>
+                        <h5>Get more control over your school</h5>
+                        <p>Say goodbye to creating schedules manually, viewing grades in a complicated way or registering students' entry and exit to the school. All that is a thing of the past. Join the best school management and control platform now.</p>
                     </div>
                 </div>
                 <div class="col-md-6">
@@ -129,14 +129,14 @@
                 </div>
                 <div class="col-md-6">
                     <div class="text-information">
-                        <h5>Low budget high quality look profressional</h5>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi impedit at aspernatur eaque! Blanditiis qui cumque unde voluptatum? Adipisci, autem.</p>
+                        <h5>Low cost and easy use for everyone</h5>
+                        <p>Unlike competitors, we offer affordable, student-based pricing and full support. Our user-friendly system requires no prior training, making it accessible for everyone.</p>
                     </div>
                 </div>
             </div>
 
         </div>
-    </section>-->
+    </section>
 
     <!-- Footer section -->
     <footer class="container">
