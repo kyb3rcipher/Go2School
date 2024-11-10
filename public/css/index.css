@@ -32,7 +32,12 @@ section.hero #down-arrow div {
     margin: 0 0 3px 10px
 }
 
-/* information section */
+/* FEATURES section */
+section.features .text-header {
+    margin-bottom: 30px;
+}
+
+/* INFORMATION section */
 section.information {
     padding: 100px 0;
 }
