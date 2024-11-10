@@ -1,7 +1,10 @@
 @extends('layouts.app')
 
-@section('title', 'The future school')
+@push('css')
+    <link rel="stylesheet" href="css/index.css">
+@endpush
 
+@section('title', 'The future school')
 @section('content')
 {{-- Hero --}}
 <section class="hero">

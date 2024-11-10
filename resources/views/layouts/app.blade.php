@@ -11,7 +11,8 @@
     
     <!-- Style -->
     @vite(['resources/scss/app.scss', 'resources/js/app.js'])   {{-- Laravel resources (boostrap) --}}
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/global.css">
+    @stack('css')
 </head>
 <body>
 <header>
