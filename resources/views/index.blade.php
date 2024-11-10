@@ -144,11 +144,11 @@
     <section id="faqs" class="faqs">
         <div class="container">
             <div class="text-header text-center"><h2>FAQs</h2></div>
-            <div class="accordion" id="accordionExample">
+            <div class="accordion">
                 
                 <div class="accordion-item">
-                  <h2 class="accordion-header"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Is the installation complicated?</button></h2>
-                  <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                  <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">Is the installation complicated?</button></h2>
+                  <div id="collapseOne" class="accordion-collapse collapse">
                     <div class="accordion-body">
                         <strong>No</strong>. The installation would be completed in a maximum of 3 days (depending on the number of students), <code>we recommend</code> doing it during a vacation period to start a school term with all your new technology.
                     </div>
@@ -157,7 +157,7 @@
 
                 <div class="accordion-item">
                   <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">Can I access from my smartphone?</button></h2>
-                  <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                  <div id="collapseTwo" class="accordion-collapse collapse">
                     <div class="accordion-body">
                         <strong>Yes</strong>. you can access Go2Trade from any device with Internet; the platform dynamically adapts to any type and size of screen.
                     </div>
@@ -166,7 +166,7 @@
                 
                 <div class="accordion-item">
                     <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">Do I need my school to have internet?</button></h2>
-                    <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div id="collapseThree" class="accordion-collapse collapse">
                         <div class="accordion-body">
                             <strong>Not</strong> necessarily. We can install the platform locally but it will only work within your school.
                         </div>
@@ -175,7 +175,7 @@
 
                 <div class="accordion-item">
                     <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">Can I request a demo of the platform??</button></h2>
-                    <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div id="collapseFour" class="accordion-collapse collapse">
                         <div class="accordion-body">
                             Of course. You can request a completely free demonstration of the platform <a href="#">here</a>.
                         </div>
