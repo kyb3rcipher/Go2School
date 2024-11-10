@@ -89,6 +89,29 @@ section.hero .text {
     line-height: 24px;
 }
 
+/* Hero */
+@keyframes bounce {
+    0% { transform: translateY(-10px)scaleY(.8) }
+    100% { transform: translateY(10px)scaleY(1) }
+}
+
+section.hero #down-arrow {
+    position: absolute;
+    bottom: 35px;
+    right: 50%;
+    animation: bounce 1s cubic-bezier(0.5, 0.05, 1, 0.5) infinite alternate;
+    transform-origin: right bottom
+}
+section.hero #down-arrow div {
+    display: block;
+    width: 15px;
+    height: 15px;
+    transform: rotate(45deg);
+    border-right: 3px solid #000;
+    border-bottom: 3px solid #000;
+    margin: 0 0 3px 10px
+}
+
 /* SETUP section */
 section.setup {
     padding: 100px 0;

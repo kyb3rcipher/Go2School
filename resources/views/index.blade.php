@@ -60,6 +60,8 @@
                 </div>
             </div>
         </div>
+
+        <a id="down-arrow" href="#features"><div></div></a>
     </section>
 
     <!-- Setup section -->
