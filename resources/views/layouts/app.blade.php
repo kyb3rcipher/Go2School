@@ -28,7 +28,7 @@
                     <li class="nav-item"><a class="nav-link" href="/#features">Features</a></li>
                     <li class="nav-item"><a class="nav-link" href="/pricing">Pricing</a></li>
                     <li class="nav-item"><a class="nav-link" href="/#faqs">FAQs</a></li>
-                    <li class="nav-item me-5"><a class="nav-link" href="#">About</a></li>
+                    <li class="nav-item me-5"><a class="nav-link" href="/about">About</a></li>
                     
                     <!--<li class="nav-item dropdown me-5">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Dropdown link</a>
@@ -64,7 +64,7 @@
                 <li class="nav-item mb-2"><a href="/#features" class="nav-link p-0 text-body-secondary">Features</a></li>
                 <li class="nav-item mb-2"><a href="/pricing" class="nav-link p-0 text-body-secondary">Pricing</a></li>
                 <li class="nav-item mb-2"><a href="/#faqs" class="nav-link p-0 text-body-secondary">FAQs</a></li>
-                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
+                <li class="nav-item mb-2"><a href="/about" class="nav-link p-0 text-body-secondary">About</a></li>
             </ul>
         </div>
     
