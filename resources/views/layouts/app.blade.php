@@ -39,15 +39,15 @@
                         </ul>
                     </li>-->
                 </ul>
-                <a href="#" class="btn btn-outline-secondary shadow-sm d-sm d-block">Platform</a>
+                <a href="/platform" class="btn btn-outline-secondary shadow-sm d-sm d-block">Platform</a>
           </div>
         </div>
     </nav>
 </header>
 
-
+<main>
     @yield('content')
-
+</main>
 
 <footer class="container">
     <div class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top">
@@ -71,7 +71,7 @@
         <div class="col mb-3">
             <h5>Platform</h5>
             <ul class="nav flex-column">
-                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
+                <li class="nav-item mb-2"><a href="/platform" class="nav-link p-0 text-body-secondary">Home</a></li>
                 <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
                 <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
                 <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
