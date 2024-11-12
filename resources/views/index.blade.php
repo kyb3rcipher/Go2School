@@ -18,7 +18,7 @@
                 </div>
             </div>
             <div class="col-md-6">
-                <img src="/assets/img/hero-img.svg" alt="hero-image" class="w-100">
+                <img src="images/index/hero-image.svg" alt="hero-image" class="w-100">
             </div>
         </div>
     </div>
