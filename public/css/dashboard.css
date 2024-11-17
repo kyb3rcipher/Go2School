@@ -12,6 +12,15 @@
     flex: 1 0 auto;
 }
 
+nav.sidebar {
+    width: 280px;
+    background-color: #FFA43B !important;
+}
+
+nav.sidebar a.active {   
+    background-color: #E97A35 !important;
+}
+
 .dropdown.no-arrow .dropdown-toggle::after {
     display: none;
 }

@@ -8,4 +8,4 @@ Route::view('/pricing', 'pricing');
 
 Route::view('/about', 'about');
 
-Route::view('/platform', 'platform');
+Route::view('/platform', 'platform.index');

@@ -8,29 +8,29 @@
     <title>@yield('title', 'Dashboard')</title>
 
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="images/logo.svg">
+    <link rel="icon" type="image/x-icon" href="/images/logo.svg">
 
     <!-- Style -->
     @vite(['resources/scss/app.scss', 'resources/js/app.js'])   {{-- Laravel resources (boostrap) --}}
-    <link rel="stylesheet" href="css/platform.css">
-    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="/css/platform.css">
+    <link rel="stylesheet" href="/css/dashboard.css">
 
     <!-- Font Awesome (temporal: change to bootstrap icons) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body id="wrapper">
-    <nav class="d-flex flex-column flex-shrink-0 p-3 bg-body-tertiary" style="width: 280px;">
+    <nav class="sidebar d-flex flex-column flex-shrink-0 p-3 bg-body-tertiary">
         <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
-            <img src="images/logo.svg" class="bi pe-none me-2" width="40" height="32">
-            <span class="fs-4">{{ config('app.name') }}</span>
+            <img src="/images/logo-black.svg" class="bi pe-none me-2" width="40" height="32">
+            <strong><span class="fs-4">{{ config('app.name') }}</span></strong>
         </a>
     
         <hr>
     
         <ul class="nav nav-pills flex-column mb-auto">
-            <li class="nav-item"> <a href="#" class="nav-link active" aria-current="page"> <i class="bi bi-house me-2"></i> Home </a> </li>
+            <li class="nav-item"> <a href="/platform" class="nav-link active" aria-current="page"> <i class="bi bi-house me-2"></i> Home </a> </li>
             
-            <li> <a href="#" class="nav-link link-body-emphasis"> <i class="bi bi-people me-2"></i> Students </a> </li>
+            <li> <a href="/platform/students" class="nav-link link-body-emphasis"> <i class="bi bi-people me-2"></i> Students </a> </li>
             <li> <a href="#" class="nav-link link-body-emphasis"> <i class="bi bi-person-workspace me-2"></i> Personal </a> </li>
             <li> <a href="#" class="nav-link link-body-emphasis"> <i class="bi bi-book me-2"></i> Library </a> </li>
         </ul>
@@ -39,7 +39,7 @@
     
         <div class="dropdown">
             <a href="#" class="d-flex align-items-center link-body-emphasis text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                <img src="images/icons/profiles/profile-1.svg" alt="" width="32" height="32" class="rounded-circle me-2">
+                <img src="/images/icons/profiles/profile-1.svg" alt="" width="32" height="32" class="rounded-circle me-2">
                 <strong>Director</strong>
             </a>
     
@@ -223,7 +223,7 @@
             <li class="nav-item dropdown no-arrow">
                 <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <span class="me-2 d-none d-lg-inline text-gray-600 small">Director</span>
-                    <img class="img-profile rounded-circle" src="images/icons/profiles/profile-1.svg">
+                    <img class="img-profile rounded-circle" src="/images/icons/profiles/profile-1.svg">
                 </a>
                 
                 <!-- Dropdown - User Information -->
@@ -252,7 +252,7 @@
 
     <div class="container-fluid">
         <div class="d-sm-flex align-items-center justify-content-between mb-4">
-            <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
+            <h1 class="h3 mb-0 text-gray-800">@yield('title')</h1>
         </div>
 
         <main>
@@ -265,7 +265,7 @@
         <div class="col-md-4 d-flex align-items-center">
             <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
             <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"/></svg>
-            <img src="images/logo.svg" width="30" height="24">
+            <img src="/images/logo.svg" width="30" height="24">
             </a>
             <span class="mb-3 mb-md-0 text-body-secondary">&copy; 2024 GoToSchool</span>
         </div>
