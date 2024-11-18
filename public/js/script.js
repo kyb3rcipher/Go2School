@@ -20,3 +20,33 @@ if (alertTrigger) {
         });
     });
 }
+
+function changeSideBar() {
+    const sideBar = document.getElementById('sideBar');
+    const sideBarSmall = document.getElementById('sideBarSmall');
+
+    const isSmallScreen = window.innerWidth < 768;
+
+    sideBar.classList.toggle('d-flex', !isSmallScreen);
+    sideBar.classList.toggle('d-none', isSmallScreen);
+
+    sideBarSmall.classList.toggle('d-flex', isSmallScreen);
+    sideBarSmall.classList.toggle('d-none', !isSmallScreen);
+}
+function toggleSideBarSmall() {
+    const sideBar = document.getElementById('sideBarSmall');
+
+    if (sideBar.style.width === "4.5rem") {
+        sideBar.style.width = 0;
+    } else {
+        sideBar.style.width = "4.5rem";
+    }
+}
+
+window.addEventListener('DOMContentLoaded', function () {
+    changeSideBar();
+    toggleSideBarSmall();
+    document.getElementById('sidebarSmallToggleTop').addEventListener('click', toggleSideBarSmall);
+
+    window.addEventListener('resize', changeSideBar);
+});

@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body id="wrapper">
-    <nav class="sidebar d-flex flex-column flex-shrink-0 p-3 bg-body-tertiary">
+    <nav class="sidebar d-flex flex-column flex-shrink-0 p-3 bg-body-tertiary" id="sideBar">
         <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
             <img src="/images/logo-black.svg" class="bi pe-none me-2" width="40" height="32">
             <strong><span class="fs-4">{{ config('app.name') }}</span></strong>
@@ -53,10 +53,37 @@
         </div>
     </nav>
 
+  <nav class="sidebar-small d-none flex-column flex-shrink-0 bg-body-tertiary" style="width: 4.5rem;" id="sideBarSmall">
+        <a href="/" class="d-block p-3 link-body-emphasis text-decoration-none" title="Icon-only" data-bs-toggle="tooltip" data-bs-placement="right">
+            <img src="/images/logo-black.svg" class="bi pe-none me-2" width="40" height="32">
+        </a>
+        
+        <ul class="nav nav-pills nav-flush flex-column mb-auto text-center">
+            <li class="nav-item"><a href="#" class="nav-link active py-3 border-bottom rounded-0" aria-current="page" title="Home" data-bs-toggle="tooltip" data-bs-placement="right"><i class="bi bi-house me-2 h3"></i></a></li>
+            
+            <li><a href="#" class="nav-link py-3 border-bottom rounded-0" title="Dashboard" data-bs-toggle="tooltip" data-bs-placement="right"> <i class="bi bi-people me-2 h3"></i> </a></li>
+            <li><a href="#" class="nav-link py-3 border-bottom rounded-0" title="Orders" data-bs-toggle="tooltip" data-bs-placement="right"> <i class="bi bi-person-workspace me-2 h3"></i> </a></li>
+            <li><a href="#" class="nav-link py-3 border-bottom rounded-0" title="Customers" data-bs-toggle="tooltip" data-bs-placement="right"> <i class="bi bi-book me-2 h3"></i> </a></li>
+        </ul>
+
+        <div class="dropdown">
+            <a href="#" class="d-flex align-items-center justify-content-center p-3 link-body-emphasis text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                <img src="/images/icons/profiles/profile-1.svg" alt="mdo" width="24" height="24" class="rounded-circle">
+            </a>
+            <ul class="dropdown-menu text-small shadow">
+                <li><a class="dropdown-item" href="#">New project...</a></li>
+                <li><a class="dropdown-item" href="#">Settings</a></li>
+                <li><a class="dropdown-item" href="#">Profile</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">Sign out</a></li>
+            </ul>
+        </div>
+    </nav>
+
 <div id="content-wrapper" class="d-flex flex-column flex-column min-vh-100">
     <nav class="navbar navbar-expand-lg navbar-light bg-white topbar mb-4 static-top shadow">
         <!-- Sidebar Toggle (Topbar) -->
-        <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle me-3">
+        <button id="sidebarSmallToggleTop" class="btn btn-link d-md-none rounded-circle me-3">
             <i class="bi bi-list h3"></i>
         </button>
 
@@ -264,8 +291,7 @@
         <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
         <div class="col-md-4 d-flex align-items-center">
             <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
-            <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"/></svg>
-            <img src="/images/logo.svg" width="30" height="24">
+                <img src="/images/logo.svg" width="24" height="24">
             </a>
             <span class="mb-3 mb-md-0 text-body-secondary">&copy; 2024 GoToSchool</span>
         </div>
@@ -278,5 +304,7 @@
         </footer>
     </footer>
 </div>
+
+<script src="/js/script.js"></script>
 </body>
 </html>

@@ -14,11 +14,22 @@
 
 nav.sidebar {
     width: 280px;
+}
+
+.sidebar {
+    transition: transform 0.3s ease-in-out;
+}
+
+nav.sidebar, nav.sidebar-small {
     background-color: #FFA43B !important;
 }
 
-nav.sidebar a.active {   
+nav.sidebar a.active, nav.sidebar-small a.active {   
     background-color: #E97A35 !important;
+}
+
+nav.sidebar-small i {
+    color: white !important;
 }
 
 .dropdown.no-arrow .dropdown-toggle::after {
