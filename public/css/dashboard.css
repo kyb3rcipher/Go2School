@@ -13,6 +13,10 @@
 }
 
 nav.sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    /* width: 250px; */
     width: 280px;
 }
 
@@ -47,4 +51,10 @@ nav.sidebar-small i {
     border-right: 1px solid #e3e6f0;
     height: calc(4.375rem - 2rem);
     margin: auto 1rem;
+}
+
+@media (min-width: 768px) {
+    #content-wrapper {
+        margin-left: 280px;
+    }
 }

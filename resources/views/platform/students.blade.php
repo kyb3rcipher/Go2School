@@ -4,9 +4,8 @@
 
 @section('content')
 <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4">
-    
     @for ($i = 0; $i < 12; $i++)
-    <div class="col">
+    <div class="col d-flex justify-content-center">
         <div class="card" style="width: 18rem;">
             <img src="https://media.istockphoto.com/id/1386479313/photo/happy-millennial-afro-american-business-woman-posing-isolated-on-white.jpg?s=612x612&w=0&k=20&c=8ssXDNTp1XAPan8Bg6mJRwG7EXHshFO5o0v9SIj96nY=" class="card-img-top" alt="...">
             <div class="card-body">
