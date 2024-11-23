@@ -3,6 +3,10 @@
 @section('title', 'Students')
 
 @section('content')
+<div class="d-sm-flex align-items-center justify-content-between mb-4">
+    <h1 class="h3 mb-0 text-gray-800">Show Students</h1>
+</div>
+
 <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4">
     @foreach ($students as $student)
     <div class="col d-flex justify-content-center">
