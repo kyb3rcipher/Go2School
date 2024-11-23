@@ -1,5 +1,4 @@
-
-@extends('layouts.app')
+@extends('layouts.landing-home')
 
 @push('js')
     <script src="js/script.js"></script>    

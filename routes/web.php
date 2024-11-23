@@ -3,11 +3,11 @@
 use App\Http\Controllers\StudentController;
 use Illuminate\Support\Facades\Route;
 
-Route::view('/', 'index');
+Route::view('/', 'landing-home.index');
 
-Route::view('/pricing', 'pricing');
+Route::view('/pricing', 'landing-home.pricing');
 
-Route::view('/about', 'about');
+Route::view('/about', 'landing-home.about');
 
 Route::view('/platform', 'platform.index');
 Route::get('/platform/students', StudentController::class);
