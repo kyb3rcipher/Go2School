@@ -9,5 +9,6 @@ Route::view('/pricing', 'landing-home.pricing');
 
 Route::view('/about', 'landing-home.about');
 
-Route::view('/platform', 'platform.index');
-Route::get('/platform/students', StudentController::class);
+Route::view('/platform', 'platform.index')->name('platform-index');
+
+Route::resource('/platform/students', StudentController::class);

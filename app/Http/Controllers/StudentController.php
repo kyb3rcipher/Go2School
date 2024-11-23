@@ -3,13 +3,18 @@
 namespace App\Http\Controllers;
 
 use App\Models\Student;
+use App\Models\Group;
 use Illuminate\Http\Request;
 
 class StudentController extends Controller
 {
-    public function __invoke() {
+    public function index() {
+        return view('platform.students.index');
+    }
+
+    public function show() {
         $students = Student::with('group')->get();
 
-        return view('platform.students', compact('students'));
+        return view('platform.students.show', compact('students'));
     }
 }
