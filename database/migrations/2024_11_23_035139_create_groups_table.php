@@ -12,6 +12,7 @@ return new class extends Migration
             $table->id();
             $table->string('grade');
             $table->char('group');
+            $table->string('carreer');
         });
     }
     
