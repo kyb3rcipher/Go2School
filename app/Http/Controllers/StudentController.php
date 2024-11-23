@@ -17,4 +17,10 @@ class StudentController extends Controller
 
         return view('platform.students.show', compact('students'));
     }
+
+    public function create() {
+        $groups = Group::all();
+        
+        return view('platform.students.create', compact('groups'));
+    }
 }
