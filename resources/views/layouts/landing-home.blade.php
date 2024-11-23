@@ -13,6 +13,7 @@
     @vite(['resources/scss/app.scss', 'resources/js/app.js'])   {{-- Laravel resources (boostrap) --}}
     <link rel="stylesheet" href="/css/global.css">
     @stack('css')
+    @livewireStyles <!-- Livewire styles -->
 </head>
 <body>
 <header>
@@ -24,11 +25,11 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="/">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="/" wire:navigate>Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="/#features">Features</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/pricing">Pricing</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/pricing" wire:navigate>Pricing</a></li>
                     <li class="nav-item"><a class="nav-link" href="/#faqs">FAQs</a></li>
-                    <li class="nav-item me-5"><a class="nav-link" href="/about">About</a></li>
+                    <li class="nav-item me-5"><a class="nav-link" href="/about" wire:navigate>About</a></li>
                     
                     <!--<li class="nav-item dropdown me-5">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Dropdown link</a>
@@ -39,7 +40,7 @@
                         </ul>
                     </li>-->
                 </ul>
-                <a href="/platform" class="btn btn-outline-secondary shadow-sm d-sm d-block">Platform</a>
+                <a href="/platform" wire:navigate class="btn btn-outline-secondary shadow-sm d-sm d-block">Platform</a>
           </div>
         </div>
     </nav>
@@ -60,18 +61,18 @@
         <div class="col mb-3">
             <h5>Product</h5>
             <ul class="nav flex-column">
-                <li class="nav-item mb-2"><a href="/" class="nav-link p-0 text-body-secondary">Home</a></li>
+                <li class="nav-item mb-2"><a href="/" wire:navigate class="nav-link p-0 text-body-secondary">Home</a></li>
                 <li class="nav-item mb-2"><a href="/#features" class="nav-link p-0 text-body-secondary">Features</a></li>
-                <li class="nav-item mb-2"><a href="/pricing" class="nav-link p-0 text-body-secondary">Pricing</a></li>
+                <li class="nav-item mb-2"><a href="/pricing" wire:navigate class="nav-link p-0 text-body-secondary">Pricing</a></li>
                 <li class="nav-item mb-2"><a href="/#faqs" class="nav-link p-0 text-body-secondary">FAQs</a></li>
-                <li class="nav-item mb-2"><a href="/about" class="nav-link p-0 text-body-secondary">About</a></li>
+                <li class="nav-item mb-2"><a href="/about" wire:navigate class="nav-link p-0 text-body-secondary">About</a></li>
             </ul>
         </div>
     
         <div class="col mb-3">
             <h5>Platform</h5>
             <ul class="nav flex-column">
-                <li class="nav-item mb-2"><a href="/platform" class="nav-link p-0 text-body-secondary">Home</a></li>
+                <li class="nav-item mb-2"><a href="/platform" wire:navigate class="nav-link p-0 text-body-secondary">Home</a></li>
                 <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
                 <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
                 <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
@@ -95,5 +96,7 @@
 
 
 @stack('js')
+<!-- Livewire scripts -->
+@livewireScripts
 </body>
 </html>
