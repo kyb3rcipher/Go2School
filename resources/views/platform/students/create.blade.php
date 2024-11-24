@@ -14,18 +14,18 @@
     </nav>
 
     <div class="mb-4">
-    <form class="row g-3" method="POST">
+    <form class="row g-3" action="{{ route('students.store') }}" method="POST" enctype="multipart/form-data">
         @csrf
 
         <div class="row g-3">
             <div class="col-md-3">
                 <label for="inputName" class="form-label">Name: <sup><i class="bi bi-asterisk text-primary"></i></sup></label>
-                <input type="email" class="form-control" id="inputName" name="name" required>
+                <input type="text" class="form-control" id="inputName" name="name" required>
             </div>
 
             <div class="col-md-3">
                 <div id="inputLastName" class="form-text" style="margin-bottom: 6px;">Last name:</div>
-                <input type="email" class="form-control" id="inputLastName" name="last_name">
+                <input type="text" class="form-control" id="inputLastName" name="last_name">
             </div>
        
             <div class="col-md-3">
@@ -40,7 +40,7 @@
 
             <div class="col-md-3">
                 <label for="inputPhoto" class="form-label">Photo</label>
-                <input class="form-control" type="file" id="inputPhoto">
+                <input class="form-control" type="file" id="inputPhoto" name="photo">
             </div>
 
             <div class="col-md-3">
@@ -68,7 +68,7 @@
             </div>
 
             <div class="col-md-2">
-                <label for="inputBloodType" class="form-label">BloodType <sup><i class="bi bi-asterisk text-primary"></i></sup></label>
+                <label for="inputBloodType" class="form-label">Blood Type <sup><i class="bi bi-asterisk text-primary"></i></sup></label>
                 <select id="inputBloodType" class="form-select" name="blood_type" required>
                     <option value="A+">A+</option>
                     <option value="A-">A-</option>
@@ -89,22 +89,22 @@
         
         <div class="row mt-4 g-3">
             <h6>Academic Information</h6>
-
+            
             <div class="col-md-3">
                 <label for="selectCarrer" class="form-label">Assign to Carrer:</label>
                 <select class="form-select" id="selectCarrer">
-                    <option value="1">Programation</option>
-                    <option value="2">Mecatronica</option>
-                    <option value="3">ARH</option>
+                    @foreach ($groups as $group)
+                        <option value="{{ $group->carreer }}">{{ $group->carreer }}</option>
+                    @endforeach
                 </select>
             </div>
             
             <div class="col-md-2">
                 <label for="selectGrade" class="form-label">Grade:</label>
-                <select class="form-select" id="selectGrade">
-                    <option value="1">1 - 2</option>
-                    <option value="2">3 - 4</option>
-                    <option value="3">5 - 6</option>
+                <select class="form-select" id="selectGrade" name="grade">
+                    @foreach ($groups as $group)
+                        <option value="{{ $group->grade }}">{{ $group->grade }}</option>
+                    @endforeach
                 </select>
             </div>
 
@@ -120,7 +120,7 @@
         
         <div class="row mt-4">
             <div class="col-12-md">
-                <button type="submit" class="btn btn-outline-primary"> <i class="bi bi-person-plus"></i>Register</button>
+                <button type="submit" class="btn btn-outline-primary"><i class="bi bi-person-plus"></i> Register</button>
             </div>
         </div>
     </form>
