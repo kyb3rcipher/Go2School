@@ -1,9 +1,5 @@
 @extends('layouts.landing-home')
 
-@push('css')
-    <link rel="stylesheet" href="css/index.css">
-@endpush
-
 @section('title', 'The future school')
 @section('content')
 {{-- Hero --}}
