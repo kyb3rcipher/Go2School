@@ -12,6 +12,7 @@
 
     <!-- Style -->
     @vite(['resources/scss/app.scss', 'resources/js/app.js'])   {{-- Laravel resources (boostrap) --}}
+    <link rel="stylesheet" href="/css/global.css">
     <link rel="stylesheet" href="/css/platform.css">
     <link rel="stylesheet" href="/css/dashboard.css">
 
