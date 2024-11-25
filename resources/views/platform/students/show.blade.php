@@ -3,9 +3,14 @@
 @section('title', 'Students')
 
 @section('content')
-<div class="d-sm-flex align-items-center justify-content-between mb-4">
-    <h1 class="h3 mb-0 text-gray-800">Show Students</h1>
-</div>
+<h1 class="h3 mb-3 text-gray-800"><i class="bi bi-person-lines-fill"></i> Show Students</h1>
+<nav>
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="{{ route('platform-index') }}">Home</a></li>
+        <li class="breadcrumb-item"><a href="{{ route('students.index') }}"><i class="bi bi-people me-2 h6"></i> Students</a></li>
+        <li class="breadcrumb-item active">Show Students</li>
+    </ol>
+</nav>
 
 <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4">
     @foreach ($students as $student)
