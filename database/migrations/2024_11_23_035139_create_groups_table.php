@@ -13,6 +13,8 @@ return new class extends Migration
             $table->string('grade');
             $table->char('group');
             $table->string('carreer');
+            
+            $table->timestamps();
         });
     }
     

@@ -15,7 +15,7 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->string('password');
             $table->string('photo')->nullable();
-            $table->string('phone', 10)->nullable();
+            $table->string('phone')->nullable();
             $table->string('address')->nullable();
             $table->char('gender')->nullable();
             $table->date('birthday');
@@ -23,6 +23,8 @@ return new class extends Migration
             $table->foreignId('group_id')->constrained()
                 ->onUpdate('cascade')
                 ->onDelete('cascade');
+            
+            $table->timestamps();
         });
     }
 
