@@ -12,10 +12,10 @@ class StudentController extends Controller
         return view('platform.students.index');
     }
 
-    public function show() {
+    public function list() {
         $students = Student::with('group')->get();
         
-        return view('platform.students.show', compact('students'));
+        return view('platform.students.list', compact('students'));
     }
 
     public function create() {

@@ -12,4 +12,4 @@ Route::view('/about', 'landing-home.about');
 Route::view('/platform', 'platform.index')->name('platform-index');
 
 Route::resource('/platform/students', StudentController::class)->except(['show']);
-Route::get('/platform/students/show', [StudentController::class, 'show'])->name('students.show');
+Route::get('/platform/students/list', [StudentController::class, 'list'])->name('students.list');
