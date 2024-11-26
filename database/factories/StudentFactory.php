@@ -13,7 +13,7 @@ class StudentFactory extends Factory
     public function definition(): array
     {
         return [
-            'name' => fake()->name(),
+            'name' => fake()->firstName() . " " . fake()->firstName(),
             'last_name' => fake()->lastName(),
             'email' => fake()->email(),
             'password' => static::$password ??= Hash::make('password'),
