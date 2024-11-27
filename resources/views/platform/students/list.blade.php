@@ -3,7 +3,6 @@
 @section('title', 'Students')
 
 @section('content')
-<div class="container">
 <h1 class="h3 mb-3 text-gray-800"><i class="bi bi bi-people-fill"></i> Students List</h1>
 <nav>
     <ol class="breadcrumb">
@@ -30,6 +29,5 @@
         </div>
     </div>
     @endforeach 
-</div>
 </div>
 @endsection
