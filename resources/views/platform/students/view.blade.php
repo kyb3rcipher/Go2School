@@ -4,27 +4,26 @@
 
 @section('content')
 <div class="container">
-    <div class="row justify-content-start">
-        <!-- LEFT MENU -->
+    <h1 class="h3 mb-3 text-gray-800"><i class="bi bi-person h2"></i> Student</h1>
+    <nav>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{{ route('platform-index') }}">Home</a></li>
+            <li class="breadcrumb-item"><a href="{{ route('students.list') }}"><i class="bi bi-person-lines-fill me-2"></i>Student List</a></li>
+            <li class="breadcrumb-item active">Profile</li>
+        </ol>
+    </nav>
+    
+    <div class="row">
         <div class="col-xs-11 col-sm-11 col-md-11 col-lg-10 col-xl-10 col-xxl">
             <div class="row pt-2">
-                <h1 class="h3 mb-3 text-gray-800"><i class="bi bi-person h2"></i> Student</h1>
-                <div class="col ps-4">
-                    <nav>
-                        <ol class="breadcrumb">
-                          <li class="breadcrumb-item"><a href="{{ route('platform-index') }}">Home</a></li>
-                          <li class="breadcrumb-item"><a href="{{ route('students.list') }}"><i class="bi bi-person-lines-fill h6"></i> Student List</a></li>
-                          <li class="breadcrumb-item active">Profile</li>
-                        </ol>
-                    </nav>
-
+                <div class="col">
                     <div class="mb-4">
                         <div class="row">
                             <div class="col-sm-4 col-md-3">
                                 <div class="card bg-light">
                                     <div class="px-2 pt-2">
                                         @if (isset($student->photo))
-                                            <img src="{ {asset('/storage'.$student->photo) }}" class="rounded-3 card-img-top" alt="Profile photo">
+                                            <img src="{ {asset('/storage' . $student->photo) }}" class="rounded-3 card-img-top" alt="Profile photo">
                                         @else
                                             <img src="https://media.istockphoto.com/id/1386479313/photo/happy-millennial-afro-american-business-woman-posing-isolated-on-white.jpg?s=612x612&w=0&k=20&c=8ssXDNTp1XAPan8Bg6mJRwG7EXHshFO5o0v9SIj96nY=" class="rounded-3 card-img-top" alt="Profile photo">
                                         @endif
@@ -126,7 +125,6 @@
                     </div>
                 </div>
             </div>
-            <!-- FOOTER -->
         </div>
     </div>
 </div>
