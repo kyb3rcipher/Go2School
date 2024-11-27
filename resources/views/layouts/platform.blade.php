@@ -22,11 +22,17 @@
 </head>
 <body id="wrapper">
     <nav class="sidebar d-flex flex-column flex-shrink-0 p-3 bg-body-tertiary" id="sideBar">
-        <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
-            <img src="/images/logo-black.svg" class="bi pe-none me-2" width="40" height="32">
-            <strong><span class="fs-4">{{ config('app.name') }}</span></strong>
-        </a>
-    
+        <div class="d-flex align-items-center mb-3 mb-md-0 me-md-auto ">
+            <a href="/" class="link-body-emphasis text-decoration-none">
+                <img src="/images/logo-black.svg" class="bi pe-none me-2" width="40" height="32">
+                <strong><span class="fs-4">{{ config('app.name') }}</span></strong>
+            </a>
+
+            <div class="position-absolute top-1 end-0 m-2">
+                <button class="btn btn-outline-secondary rounded-circle border-0" id="sidebarToggle"><i class="bi bi-caret-left"></i></button>
+            </div>
+        </div>
+        
         <hr>
     
         <ul class="nav nav-pills flex-column mb-auto">
@@ -36,9 +42,9 @@
             <li> <a href="#" class="nav-link link-body-emphasis"> <i class="bi bi-person-workspace me-2"></i> Personal </a> </li>
             <li> <a href="#" class="nav-link link-body-emphasis"> <i class="bi bi-book me-2"></i> Library </a> </li>
         </ul>
-    
+
         <hr>
-    
+
         <div class="dropdown">
             <a href="#" class="d-flex align-items-center link-body-emphasis text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
                 <img src="/images/icons/profiles/profile-1.svg" alt="" width="32" height="32" class="rounded-circle me-2">
@@ -82,7 +88,7 @@
         </div>
     </nav>
 
-<div id="content-wrapper" class="d-flex flex-column flex-column min-vh-100">
+<div id="content-wrapper" class="d-flex flex-column min-vh-100">
     <nav class="navbar navbar-expand-lg navbar-light bg-white topbar mb-4 static-top shadow">
         <!-- Sidebar Toggle (Topbar) -->
         <button id="sidebarSmallToggleTop" class="btn btn-link d-md-none rounded-circle me-3">

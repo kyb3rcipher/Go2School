@@ -49,4 +49,18 @@ window.addEventListener('DOMContentLoaded', function () {
     document.getElementById('sidebarSmallToggleTop').addEventListener('click', toggleSideBarSmall);
 
     window.addEventListener('resize', changeSideBar);
+
+    document.getElementById('sidebarToggle').addEventListener('click', function () {
+        const sideBar = document.getElementById('sideBar');
+        const sideBarSmall = document.getElementById('sideBarSmall');
+
+        sideBar.style.width = 0;
+        sideBar.classList.remove('d-flex');
+        sideBar.classList.add('d-none');
+        
+        sideBarSmall.style.width = "4.5rem";
+        document.getElementById('content-wrapper').style.marginLeft = 0;
+        sideBarSmall.classList.add('d-flex');
+        sideBarSmall.classList.remove('d-none');
+    });
 });
