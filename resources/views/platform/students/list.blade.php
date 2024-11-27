@@ -24,13 +24,10 @@
                     Group: {{ $student->group->group ?? 'Without group' }} <br>
                     Carrer: {{ $student->group->carreer ?? 'Without carreer' }} <br>
                 </p>
-                <button class="btn btn-primary" onclick="Livewire.dispatch('show-student', { id: '{{ $student->id }}' })" data-bs-toggle="modal" data-bs-target="#studentModal">View <i class="bi bi-eye h5"></i></button>
+                <a class="btn btn-primary" href="{{ route('student.view', ['id' => $student->id]) }}">View <i class="bi bi-eye h5"></i></a>
             </div>
         </div>
     </div>
     @endforeach 
 </div>
-
-
-@livewire('student-modal')
 @endsection

@@ -13,3 +13,4 @@ Route::view('/platform', 'platform.index')->name('platform-index');
 
 Route::resource('/platform/students', StudentController::class)->except(['show']);
 Route::get('/platform/students/list', [StudentController::class, 'list'])->name('students.list');
+Route::get('/platform/students/view/{id}', [StudentController::class, 'view'])->name('student.view');

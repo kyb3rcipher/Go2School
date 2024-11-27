@@ -18,6 +18,12 @@ class StudentController extends Controller
         return view('platform.students.list', compact('students'));
     }
 
+    public function view($id) {
+        $student = Student::find($id);
+        
+        return view('platform.students.view', compact('student'));
+    }
+
     public function create() {
         $groups = Group::all();
         
