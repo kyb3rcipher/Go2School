@@ -36,9 +36,11 @@
         <hr>
     
         <ul class="nav nav-pills flex-column mb-auto">
-            <li class="nav-item"> <a href="/platform" class="nav-link active" aria-current="page"> <i class="bi bi-house me-2"></i> Home </a> </li>
+            <li class="nav-item"> 
+                <a href="/platform" @class(['nav-link', 'active' => request()->routeIs('platform-index'), 'link-body-emphasis']) aria-current="page"> <i class="bi bi-house me-2"></i> Home </a>
+            </li>
             
-            <li> <a href="/platform/students" class="nav-link link-body-emphasis"> <i class="bi bi-people me-2"></i> Students </a> </li>
+            <li> <a href="/platform/students" @class(['nav-link','active' => request()->routeIs('students*'), 'link-body-emphasis'])> <i class="bi bi-people me-2"></i> Students </a> </li>
             <li> <a href="#" class="nav-link link-body-emphasis"> <i class="bi bi-person-workspace me-2"></i> Personal </a> </li>
             <li> <a href="#" class="nav-link link-body-emphasis"> <i class="bi bi-book me-2"></i> Library </a> </li>
         </ul>
@@ -67,11 +69,11 @@
         </a>
         
         <ul class="nav nav-pills nav-flush flex-column mb-auto text-center">
-            <li class="nav-item"><a href="#" class="nav-link active py-3 border-bottom rounded-0" aria-current="page" title="Home" data-bs-toggle="tooltip" data-bs-placement="right"><i class="bi bi-house me-2 h3"></i></a></li>
+            <li class="nav-item"><a href="{{ route('platform-index') }}" @class(['nav-link', 'active' => request()->routeIs('platform-index'), 'py-3', 'border-bottom', 'rounded-0']) aria-current="page" title="Home" data-bs-toggle="tooltip" data-bs-placement="right" wire:navigate.hover><i class="bi bi-house me-2 h3"></i></a></li>
             
-            <li><a href="#" class="nav-link py-3 border-bottom rounded-0" title="Dashboard" data-bs-toggle="tooltip" data-bs-placement="right"> <i class="bi bi-people me-2 h3"></i> </a></li>
-            <li><a href="#" class="nav-link py-3 border-bottom rounded-0" title="Orders" data-bs-toggle="tooltip" data-bs-placement="right"> <i class="bi bi-person-workspace me-2 h3"></i> </a></li>
-            <li><a href="#" class="nav-link py-3 border-bottom rounded-0" title="Customers" data-bs-toggle="tooltip" data-bs-placement="right"> <i class="bi bi-book me-2 h3"></i> </a></li>
+            <li><a href="{{ route('students.index') }}" @class(['nav-link', 'active' => request()->routeIs('students*'), 'py-3', 'border-bottom', 'rounded-0']) title="Dashboard" data-bs-toggle="tooltip" data-bs-placement="right" wire:navigate.hover> <i class="bi bi-people me-2 h3"></i> </a></li>
+            <li><a href="#" class="nav-link py-3 border-bottom rounded-0" title="Orders" data-bs-toggle="tooltip" data-bs-placement="right" wire:navigate.hover> <i class="bi bi-person-workspace me-2 h3"></i> </a></li>
+            <li><a href="#" class="nav-link py-3 border-bottom rounded-0" title="Customers" data-bs-toggle="tooltip" data-bs-placement="right" wire:navigate.hover> <i class="bi bi-book me-2 h3"></i> </a></li>
         </ul>
 
         <div class="dropdown">
