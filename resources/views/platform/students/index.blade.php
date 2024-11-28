@@ -33,7 +33,7 @@
 
     <div class="col">
         <div class="p-3 bg-white border border-3 rounded-3 h-100" style="margin-top: 23px;">
-            <h3><a href="{{ route('students.list') }}" class="link-underline link-underline-opacity-0"><i class="bi bi-person-fill h2"></i> Students</a></h3>
+            <h3><a href="{{ route('students.list') }}" class="link-underline link-underline-opacity-0"  wire:navigate><i class="bi bi-person-fill h2"></i> Students</a></h3>
 
             @php $studentCount = 1000;  $maleStudentsBySession = 400; $maleStudentsBySession = 600; @endphp
             <div>

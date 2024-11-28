@@ -6,8 +6,8 @@
 <h1 class="h3 mb-3 text-gray-800"><i class="bi bi-person-lines-fill"></i> Register Student</h1>
 <nav>
     <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="{{ route('platform-index') }}">Home</a></li>
-        <li class="breadcrumb-item"><a href="{{ route('students.index') }}"><i class="bi bi-people me-2 h6"></i> Students</a></li>
+        <li class="breadcrumb-item"><a href="{{ route('platform-index') }}" wire:navigate>Home</a></li>
+        <li class="breadcrumb-item"><a href="{{ route('students.index') }}" wire:navigate><i class="bi bi-people me-2 h6"></i> Students</a></li>
         <li class="breadcrumb-item active">Register Student</li>
     </ol>
 </nav>
