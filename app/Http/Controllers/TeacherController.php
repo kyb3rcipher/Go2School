@@ -11,6 +11,11 @@ class TeacherController extends Controller
         return view('platform.teachers.index');
     }
 
+    public function list() {
+        $teachers = Teacher::all();
+        return view('platform.teachers.list', compact('teachers'));
+    }
+
     public function create() {
         return view('platform.teachers.create');
     }
