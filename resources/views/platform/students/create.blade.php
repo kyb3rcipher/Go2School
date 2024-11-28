@@ -3,7 +3,7 @@
 @section('title', 'Register student')
 
 @section ('content')
-<h1 class="h3 mb-3 text-gray-800"><i class="bi bi-person-lines-fill"></i> Register Student</h1>
+<h1 class="h3 mb-3 text-gray-800"><i class="bi bi-person-plus-fill"></i> Register Student</h1>
 <nav>
     <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="{{ route('platform-index') }}" wire:navigate>Home</a></li>
