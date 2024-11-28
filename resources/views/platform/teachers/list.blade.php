@@ -1,5 +1,7 @@
 @extends('layouts.platform')
 
+@section('title', 'List Teachers')
+
 @section('content')
 <h1 class="h3 mb-3 text-gray-800"><i class="bi bi-person-rolodex"></i> List Teacher</h1>
 <nav>
@@ -38,7 +40,7 @@
                 <td>{{ $teacher->phone }}</td>
                 <td>
                     <div class="btn-group" role="group">
-                        <a href="#" role="button" class="btn btn-sm btn-outline-primary"><i class="bi bi-eye"></i> View</a>
+                        <a href="{{ route('teachers.view', ['id' => $teacher->id]) }}" role="button" class="btn btn-sm btn-outline-primary"><i class="bi bi-eye"></i> View</a>
                         <a href="#" role="button" class="btn btn-sm btn-outline-primary"><i class="bi bi-pen"></i> Edit</a>
                         <button type="button" class="btn btn-sm btn-primary"><i class="bi bi-trash2"></i> Delete</button>
                     </div>

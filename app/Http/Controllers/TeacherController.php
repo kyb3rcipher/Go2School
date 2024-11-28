@@ -36,4 +36,9 @@ class TeacherController extends Controller
 
         return redirect()->route('teachers.create')->with('success', true);
     }
+
+    public function view($id) {
+        $teacher = Teacher::find($id);
+        return view('platform.teachers.view', compact('teacher'));
+    }
 }
