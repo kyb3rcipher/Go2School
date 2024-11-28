@@ -85,7 +85,7 @@
     };
     
     // Launch alert if success store controller return success
-    @if (true)
+    @if (session('success'))
     document.addEventListener('DOMContentLoaded', () => {
         window.launchSwal();
     });
