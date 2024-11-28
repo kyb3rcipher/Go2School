@@ -12,6 +12,22 @@
     </ol>
 </nav>
 
+<h6>Filter by:</h6>
+<div class="mb-4 mt-4">
+    <form class="row" action="#" method="GET">
+        <div class="col">
+            <select onchange="" class="form-select" aria-label="Class" name="class_id" required>
+                <option selected disabled>Select a grade</option>
+            </select>
+        </div>
+
+        <div class="col">
+            <button type="submit" class="btn btn-primary"><i class="bi bi-arrow-counterclockwise"></i> Load List</button>
+            <a href="{{ route('students.create') }}" type="button" class="btn btn-primary" wire:navigate><i class="bi bi bi-person-plus"></i> Register Student</a>
+        </div>
+    </form>
+</div>
+
 <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4">
     @foreach ($students as $student)
     <div class="col d-flex justify-content-center">
@@ -24,7 +40,7 @@
                     Group: {{ $student->group->group ?? 'Without group' }} <br>
                     Carrer: {{ $student->group->carreer ?? 'Without carreer' }} <br>
                 </p>
-                <a class="btn btn-primary" href="{{ route('student.view', ['id' => $student->id]) }}">View <i class="bi bi-eye h5"></i></a>
+                <a class="btn btn-primary" href="{{ route('student.view', ['id' => $student->id]) }}" wire:navigate>View <i class="bi bi-eye h5"></i></a>
             </div>
         </div>
     </div>
