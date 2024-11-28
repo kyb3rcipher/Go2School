@@ -41,7 +41,7 @@
             </li>
             
             <li> <a href="/platform/students" @class(['nav-link','active' => request()->routeIs('students*'), 'link-body-emphasis'])> <i class="bi bi-people me-2"></i> Students </a> </li>
-            <li> <a href="#" class="nav-link link-body-emphasis"> <i class="bi bi-person-workspace me-2"></i> Personal </a> </li>
+            <li> <a href="{{ route('teachers.index') }}" @class((['nav-link', 'active' => request()->routeIs('teachers*'), 'link-body-emphasis']))> <i class="bi bi-person-video3 me-2"></i> Teachers</a> </li>
             <li> <a href="#" class="nav-link link-body-emphasis"> <i class="bi bi-book me-2"></i> Library </a> </li>
         </ul>
 
