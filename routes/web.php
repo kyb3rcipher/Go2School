@@ -18,5 +18,4 @@ Route::get('/platform/students/list/view/{id}', [StudentController::class, 'view
 
 // Teachers
 Route::resource('/platform/teachers', TeacherController::class)->except('show');
-Route::get('/platform/teachers/list', [TeacherController::class, 'list'])->name('teachers.list');
 Route::get('/platform/teachers/list/view/{id}', [TeacherController::class, 'view'])->name('teachers.view');

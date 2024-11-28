@@ -3,14 +3,10 @@
 @section('title', 'List Teachers')
 
 @section('content')
-<h1 class="h3 mb-3 text-gray-800"><i class="bi bi-person-rolodex"></i> List Teacher</h1>
-<nav>
-    <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="{{ route('platform-index') }}" wire:navigate>Home</a></li>
-        <li class="breadcrumb-item"><a href="{{ route('teachers.index') }}" wire:navigate><i class="bi bi-person-video3 me-2 h6"></i> Teachers</a></li>
-        <li class="breadcrumb-item active">List Teacher</li>
-    </ol>
-</nav>
+<div class="d-flex align-items-center mb-3 justify-content-between">
+    <h1 class="h3 text-gray-800 mb-0"><i class="bi bi-person-rolodex me-2"></i> List Teachers</h1>
+    <a href="{{ route('teachers.create') }}" type="button" class="btn btn-primary btn-circle" wire:navigate><i class="bi bi-plus-lg"></i></a>
+</div>
 
 <div class="mb-4 p-3 bg-white border shadow-sm">
     <table class="table table-responsive">

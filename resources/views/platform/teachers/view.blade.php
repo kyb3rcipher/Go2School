@@ -7,7 +7,7 @@
 <nav>
     <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="{{ route('platform-index') }}" wire:navigate>Home</a></li>
-        <li class="breadcrumb-item"><a href="{{ route('teachers.list') }}" wire:navigate><i class="bi bi-person-lines-fill me-2"></i>Teacher List</a></li>
+        <li class="breadcrumb-item"><a href="{{ route('teachers.index') }}" wire:navigate><i class="bi bi-person-lines-fill me-2"></i>Teachers</a></li>
         <li class="breadcrumb-item active">Profile</li>
     </ol>
 </nav>

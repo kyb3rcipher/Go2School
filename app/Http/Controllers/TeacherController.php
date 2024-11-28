@@ -8,10 +8,6 @@ use Illuminate\Http\Request;
 class TeacherController extends Controller
 {
     public function index() {
-        return view('platform.teachers.index');
-    }
-
-    public function list() {
         $teachers = Teacher::all();
         return view('platform.teachers.list', compact('teachers'));
     }

@@ -5,7 +5,7 @@
 <nav>
     <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="{{ route('platform-index') }}" wire:navigate>Home</a></li>
-        <li class="breadcrumb-item"><a href="{{ route('students.index') }}" wire:navigate><i class="bi bi-person-video3 me-2 h6"></i> Teachers</a></li>
+        <li class="breadcrumb-item"><a href="{{ route('teachers.index') }}" wire:navigate><i class="bi bi-person-video3 me-2 h6"></i> Teachers</a></li>
         <li class="breadcrumb-item active" aria-current="page">Add Teacher</li>
     </ol>
 </nav>
