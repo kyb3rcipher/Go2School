@@ -124,4 +124,21 @@
     </div>
 </form>
 </div>
+
+<script>
+    window.launchSwal = () => {
+        Swal.fire({
+            title: 'Success!',
+            text: 'The student has been added successfully.',
+            icon: 'success',
+        });
+    };
+    
+    // Launch alert if success store controller return success
+    @if (session('success'))
+    document.addEventListener('DOMContentLoaded', () => {
+        window.launchSwal();
+    });
+    @endif
+</script>
 @endsection

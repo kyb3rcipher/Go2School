@@ -49,6 +49,6 @@ class StudentController extends Controller
         $newStudent->group_id = '1';
         $newStudent->save();
         
-        return redirect()->route('students.create');
+        return redirect()->route('students.create')->with('success', true);
     }
 }
