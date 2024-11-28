@@ -40,7 +40,7 @@
                     Group: {{ $student->group->group ?? 'Without group' }} <br>
                     Carrer: {{ $student->group->carreer ?? 'Without carreer' }} <br>
                 </p>
-                <a class="btn btn-primary" href="{{ route('student.view', ['id' => $student->id]) }}" wire:navigate>View <i class="bi bi-eye h5"></i></a>
+                <a class="btn btn-primary" href="{{ route('students.view', ['id' => $student->id]) }}" wire:navigate>View <i class="bi bi-eye h5"></i></a>
             </div>
         </div>
     </div>
