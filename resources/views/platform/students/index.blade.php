@@ -18,11 +18,40 @@
                 <div class="card-body">
                     <h5 class="card-title">Groups:</h5>
                     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                    <a href="#" class="btn btn-primary btn-icon-split"><span class="icon text-white-50"><i class="bi bi-person-video2 h5"></i></span> <span class="text">Show groups</span></a>
+                    <a href="{{ route('students.groups') }}" class="btn btn-primary btn-icon-split" wire:navigate><span class="icon text-white-50"><i class="bi bi-person-video2 h5"></i></span> <span class="text">Show groups</span></a>
                 </div>
             </div>
         </div>
 
+        <fieldset class="border border-4 p-2 rounded-3 me-2">
+            <legend class="float-none w-auto p-2">Classrooms: <button class="btn btn-primary btn-circle btn-sm"><i class="bi bi-plus-lg" style="color: white; -webkit-text-stroke: 1px;" data-bs-toggle="modal" data-bs-target="#addClassroomModal"></i></button></legend>
+            
+            @php
+                $classroomsCounter = 0;
+                $laboratoriesCounter = [];
+            @endphp
+
+            @foreach ($classrooms as $classroom)
+                @if ($classroom->laboratory !== null)
+                    @php
+                        // Incrementar el contador para el laboratorio específico
+                        if (!isset($laboratoriesCounter[$classroom->laboratory])) {
+                            $laboratoriesCounter[$classroom->laboratory] = 0;
+                        }
+                        $laboratoriesCounter[$classroom->laboratory]++;
+                    @endphp
+                @else
+                    @php $classroomsCounter++; @endphp
+                @endif
+            @endforeach
+
+            <p>Classrooms: {{ $classroomsCounter }}</p>
+            
+            {{-- Mostrar el contador por laboratorio --}}
+            @foreach ($laboratoriesCounter as $laboratory => $count)
+                <p>Laboratories ({{ $laboratory }}): {{ $count }}</p>
+            @endforeach
+        </fieldset>
     </div>
 
     <div class="col">
@@ -63,6 +92,20 @@
             </div>
             
             @livewire('carrer-create')
+        </div>
+    </div>
+</div>
+
+<!-- Add new classroom modal -->
+<div class="modal fade" id="addClassroomModal" tabindex="-1" aria-labelledby="addClassroomModal" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="addClassroomModal">Add classroom</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            
+            @livewire('classroom-create')
         </div>
     </div>
 </div>
