@@ -10,13 +10,11 @@
 
         <div class="d-flex justify-content-between">
             <fieldset class="border border-4 p-2 rounded-3 w-50 me-2">
-                <legend class="float-none w-auto p-2">Carrers: <button class="btn btn-primary btn-circle btn-sm"><i class="bi bi-plus-lg" style="color: white; -webkit-text-stroke: 1px;"></i></button></legend>
+                <legend class="float-none w-auto p-2">Carrers: <button class="btn btn-primary btn-circle btn-sm"><i class="bi bi-plus-lg" style="color: white; -webkit-text-stroke: 1px;" data-bs-toggle="modal" data-bs-target="#addCarrerModal"></i></button></legend>
                 <ul>
-                    <li>Programation</li>
-                    <li>Mecatronica</li>
-                    <li>Elecronica</li>
-                    <li>Arquitectura</li>
-                    <li>ARH</li>
+                    @foreach ($carrers as $carrer)
+                        <li>{{ $carrer->name }}</li>
+                    @endforeach
                 </ul>
             </fieldset>
 
@@ -55,6 +53,20 @@
                     </div>
                 </div>
             
+        </div>
+    </div>
+</div>
+
+<!-- Add new carrer modal -->
+<div class="modal fade" id="addCarrerModal" tabindex="-1" aria-labelledby="addCarrerModal" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="addCarrerModal">Add new carrer</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            
+            @livewire('carrer-create')
         </div>
     </div>
 </div>

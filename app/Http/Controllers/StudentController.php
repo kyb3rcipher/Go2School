@@ -3,13 +3,16 @@
 namespace App\Http\Controllers;
 
 use App\Models\Student;
+use App\Models\Carrer;
 use App\Models\Group;
 use Illuminate\Http\Request;
 
 class StudentController extends Controller
 {
     public function index() {
-        return view('platform.students.index');
+        $carrers = Carrer::all();
+
+        return view('platform.students.index', compact('carrers'));
     }
 
     public function list() {
