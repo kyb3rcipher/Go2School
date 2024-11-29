@@ -11,11 +11,7 @@
         <div class="d-flex justify-content-between">
             <fieldset class="border border-4 p-2 rounded-3 w-50 me-2">
                 <legend class="float-none w-auto p-2">Carrers: <button class="btn btn-primary btn-circle btn-sm"><i class="bi bi-plus-lg" style="color: white; -webkit-text-stroke: 1px;" data-bs-toggle="modal" data-bs-target="#addCarrerModal"></i></button></legend>
-                <ul>
-                    @foreach ($carrers as $carrer)
-                        <li>{{ $carrer->name }}</li>
-                    @endforeach
-                </ul>
+                @livewire('carrer-list')
             </fieldset>
 
             <div class="card border-3 rounded-3 w-50" style="margin-top: 22px; width: 18rem;">

@@ -21,6 +21,9 @@ class CarrerCreate extends Component
             'name' => $this->name
         ]);
 
+        // Dispatch an event to update the list
+        $this->dispatch('carrer-added')->to(CarrerList::class);
+        
         // Reset the input and show a success message
         session()->flash('success', $this->name);
         $this->reset('name');
