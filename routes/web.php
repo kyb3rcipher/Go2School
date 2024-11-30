@@ -23,3 +23,5 @@ Route::resource('/platform/students/groups', GroupController::class)->name('inde
 // Teachers
 Route::resource('/platform/teachers', TeacherController::class)->except('show');
 Route::get('/platform/teachers/list/view/{id}', [TeacherController::class, 'view'])->name('teachers.view');
+Route::get('/platform/teachers/edit/{id}', [TeacherController::class, 'edit'])->name('teachers.edit');
+Route::delete('/platform/teachers/{id}', [TeacherController::class, 'destroy'])->name('teachers.destroy');
