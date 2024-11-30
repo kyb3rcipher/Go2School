@@ -5,14 +5,16 @@ namespace App\Http\Controllers;
 use App\Models\Student;
 use App\Models\Carrer;
 use App\Models\Group;
+use App\Models\Classroom;
 use Illuminate\Http\Request;
 
 class StudentController extends Controller
 {
     public function index() {
         $carrers = Carrer::all();
+        $classrooms = Classroom::all();
 
-        return view('platform.students.index', compact('carrers'));
+        return view('platform.students.index', compact('carrers', 'classrooms'));
     }
 
     public function list() {
