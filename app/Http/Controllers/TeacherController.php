@@ -37,4 +37,27 @@ class TeacherController extends Controller
         $teacher = Teacher::find($id);
         return view('platform.teachers.view', compact('teacher'));
     }
+    
+    public function edit($id) {
+        $teacher = Teacher::find($id);
+        return view('platform.teachers.edit', compact('teacher', 'id'));
+    }
+
+    public function update(Request $request, $id) {
+        $teacher = Teacher::find($id);
+
+        $teacher->name = $request->input('name');
+        $teacher->last_name = $request->input('last_name');
+        $teacher->email = $request->input('email');
+        //$teacher->photo = $request->input('photo');
+        $teacher->address = $request->input('address');
+        $teacher->phone = $request->input('phone');
+        $teacher->birthday = $request->input('birthday');
+        $teacher->gender = $request->input('gender');
+
+        $teacher->save();
+
+        return redirect('/platform/teachers/');
+
+    }
 }
