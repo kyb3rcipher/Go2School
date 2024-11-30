@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="/css/global.css">
     <link rel="stylesheet" href="/css/platform.css">
     <link rel="stylesheet" href="/css/dashboard.css">
+    @stack('css')
 
     <!-- Font Awesome (temporal: change to bootstrap icons) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -310,5 +311,6 @@
 
 @livewireScripts
 <script src="/js/script.js"></script>
+@stack('js')
 </body>
 </html>
