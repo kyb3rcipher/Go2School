@@ -60,4 +60,10 @@ class TeacherController extends Controller
         return redirect('/platform/teachers/');
 
     }
+
+    public function destroy($id) {
+        $teacher = Teacher::find($id);
+        $teacher->delete();
+        return redirect('/platform/teachers/');
+    }
 }

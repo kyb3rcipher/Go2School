@@ -38,7 +38,11 @@
                     <div class="btn-group" role="group">
                         <a href="{{ route('teachers.view', ['id' => $teacher->id]) }}" role="button" class="btn btn-sm btn-outline-primary" wire:navigate><i class="bi bi-eye"></i> View</a>
                         <a href="{{ route('teachers.edit', ['id' => $teacher->id]) }}" role="button" class="btn btn-sm btn-outline-primary"><i class="bi bi-pen"></i> Edit</a>
-                        <button type="button" class="btn btn-sm btn-primary"><i class="bi bi-trash2"></i> Delete</button>
+                        <form action="{{ route('teachers.destroy', ['id' => $teacher->id]) }}" method="POST" style="display:inline;">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit" class="btn btn-sm btn-primary"><i class="bi bi-trash2"></i> Delete</button>
+                        </form>
                     </div>
                 </td>
             </tr>
