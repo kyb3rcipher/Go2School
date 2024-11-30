@@ -126,8 +126,8 @@
                                 </select>
             
                                 <div class="d-flex flex-column justify-content-center gap-3">
-                                    <button type="button" id="move-right" class="btn btn-circle btn-primary" onclick="addSubject()"><i class="bi bi-arrow-right-short"></i></button>
-                                    <button type="button" id="move-left" class="btn btn-circle btn-primary" onclick="addSubject()"><i class="bi bi-arrow-left-short"></i></button>
+                                    <button type="button" id="move-right" class="btn btn-circle btn-primary" onclick="addSubject(true)"><i class="bi bi-arrow-right-short"></i></button>
+                                    <button type="button" id="move-left" class="btn btn-circle btn-primary" onclick="addSubject(false)"><i class="bi bi-arrow-left-short"></i></button>
                                 </div>
             
                                 <select name="" id="destination" size="5" class="form-select" multiple>
@@ -135,7 +135,7 @@
                                 </select>
                             </div>
                             
-                            <ul class="p-0" id="selectSubjectsTeachers" style="max-height: 100px; overflow-y: auto;">
+                            <ul class="p-0" id="selectSubjectsTeachers" style="max-height: 100px; overflow-y: auto; overflow-x: hidden;">
                                 <!-- Dinamic select(s) [teachers] for subjects -->
                             </ul>
                         </div>
