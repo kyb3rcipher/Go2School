@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\StudentController;
+use App\Http\Controllers\SubjectController;
 use App\Http\Controllers\TeacherController;
 use App\Http\Controllers\GroupController;
 use Illuminate\Support\Facades\Route;
@@ -19,6 +20,10 @@ Route::get('/platform/students/list/view/{id}', [StudentController::class, 'view
 
 // Groups
 Route::resource('/platform/students/groups', GroupController::class)->name('index', 'students.groups');
+
+
+// Subjects
+Route::resource('/platform/teachers/subjects', SubjectController::class);
 
 // Teachers
 Route::resource('/platform/teachers', TeacherController::class)->except('show');

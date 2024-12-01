@@ -1,17 +1,40 @@
 @extends('layouts.platform')
 
-@section('title', 'Students')
-
-@section ('content')
-<h1 class="h3 mb-3 text-gray-800"><i class="bi bi-person-lines-fill"></i> Students</h1>
+@section('content')
+<h1 class="h3 mb-3 text-gray-800"><i class="bi bi-person-video3 h2"></i> Teachers</h1>
 
 <div class="row align-items-md-stretch mt-4">
     <div class="col">
 
         <div class="d-flex justify-content-between">
             <fieldset class="border border-4 p-2 rounded-3 w-50 me-2">
-                <legend class="float-none w-auto p-2">Carrers: <button class="btn btn-primary btn-circle btn-sm"><i class="bi bi-plus-lg" style="color: white; -webkit-text-stroke: 1px;" data-bs-toggle="modal" data-bs-target="#addCarrerModal"></i></button></legend>
-                @livewire('carrer-list')
+                <legend class="float-none w-auto p-2">Classrooms: <button class="btn btn-primary btn-circle btn-sm"><i class="bi bi-plus-lg" style="color: white; -webkit-text-stroke: 1px;" data-bs-toggle="modal" data-bs-target="#addClassroomModal"></i></button></legend>
+
+                @php
+                    $classroomsCounter = 0;
+                    $laboratoriesCounter = [];
+                @endphp
+
+                @foreach ($classrooms as $classroom)
+                    @if ($classroom->laboratory !== null)
+                        @php
+                            if (!isset($laboratoriesCounter[$classroom->laboratory])) {
+                                $laboratoriesCounter[$classroom->laboratory] = 0;
+                            }
+                            $laboratoriesCounter[$classroom->laboratory]++;
+                        @endphp
+                    @else
+                        @php $classroomsCounter++; @endphp
+                    @endif
+                @endforeach
+
+                @if ($classroomsCounter > 0)
+                <p>Classrooms: {{ $classroomsCounter }}</p>
+                @endif
+                
+                @foreach ($laboratoriesCounter as $laboratory => $count)
+                    <p>Laboratories ({{ $laboratory }}): {{ $count }}</p>
+                @endforeach
             </fieldset>
 
             <div class="card border-3 rounded-3 w-50" style="margin-top: 22px; width: 18rem;">
@@ -22,11 +45,17 @@
                 </div>
             </div>
         </div>
+
+        <fieldset class="border border-4 p-2 rounded-3 me-2">
+            <legend class="float-none w-auto p-2"><a href="{{ route('subjects.index') }}" class="link-underline link-underline-opacity-0">Subjects:</a></legend>
+
+            
+        </fieldset>
     </div>
 
     <div class="col">
         <div class="p-3 bg-white border border-3 rounded-3 h-100" style="margin-top: 23px;">
-            <h3><a href="{{ route('students.list') }}" class="link-underline link-underline-opacity-0"  wire:navigate><i class="bi bi-person-fill h2"></i> Students</a></h3>
+            <h3><a href="{{ route('students.list') }}" class="link-underline link-underline-opacity-0" wire:navigate><i class="bi bi-person-fill h2"></i> Students</a></h3>
 
             @php $studentCount = 1000;  $maleStudentsBySession = 400; $maleStudentsBySession = 600; @endphp
             <div>
@@ -62,6 +91,34 @@
             </div>
             
             @livewire('carrer-create')
+        </div>
+    </div>
+</div>
+
+<!-- Add new classroom modal -->
+<div class="modal fade" id="addClassroomModal" tabindex="-1" aria-labelledby="addClassroomModal" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="addClassroomModal">Add classroom</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            
+            @livewire('classroom-create')
+        </div>
+    </div>
+</div>
+
+<!-- Add new classroom modal -->
+<div class="modal fade" id="addClassroomModal" tabindex="-1" aria-labelledby="addClassroomModal" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="addClassroomModal">Add classroom</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            
+            @livewire('classroom-create')
         </div>
     </div>
 </div>

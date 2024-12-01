@@ -3,11 +3,17 @@
 namespace App\Http\Controllers;
 
 use App\Models\Teacher;
+use App\Models\Classroom;
 use Illuminate\Http\Request;
 
 class TeacherController extends Controller
 {
     public function index() {
+        $classrooms = Classroom::all();
+        return view('platform.teachers.index', compact('classrooms'));
+    }
+
+    public function list() {
         $teachers = Teacher::all();
         return view('platform.teachers.list', compact('teachers'));
     }
