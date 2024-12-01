@@ -1,60 +1,67 @@
 const sourceContainer = document.getElementById('source-container');
 const targetContainer = document.getElementById('target-container');
+const teacherIdsInput = document.getElementById('teacher-ids');
 
-// Variable to track the dragged element
 let currentDraggedElement = null;
-
-// Select the draggable elements
 const draggables = document.querySelectorAll('.draggable');
 
 draggables.forEach(item => {
-    // dragstart event: start dragging
     item.addEventListener('dragstart', (e) => {
-        currentDraggedElement = item;
-        e.dataTransfer.setData('text/plain', item.id);
+        currentDraggedElement = item; // Store the dragged element
+        e.dataTransfer.setData('text/plain', item.id); // Store the dragged item's ID for later use
         item.classList.add('dragging');
     });
 
-    // dragend event: end dragging
     item.addEventListener('dragend', () => {
         item.classList.remove('dragging');
-        currentDraggedElement = null;
+        currentDraggedElement = null; // Clear the dragged element
     });
 });
 
-// dragover event on the target container
+// Allow dragging over the target container
 targetContainer.addEventListener('dragover', (e) => {
-    e.preventDefault();
-    targetContainer.classList.add('drag-over');
+    e.preventDefault(); // Allow the drop by preventing the default behavior
+    targetContainer.classList.add('drag-over'); // Add a class to style the target container while dragging over it
 });
 
-// drop event on the target container
+// Handle the drop event on the target container
 targetContainer.addEventListener('drop', (e) => {
-    e.preventDefault();
-    targetContainer.classList.remove('drag-over');
+    e.preventDefault(); // Prevent default behavior to allow drop
+    targetContainer.classList.remove('drag-over'); // Remove the drag-over styling
 
-    // Remove helper text if present
+    // Remove any helper text if it exists
     const helperText = targetContainer.querySelector('p.text-muted');
     if (helperText) {
-        helperText.remove();
+        helperText.remove(); // Remove the "Drag elements here" text
     }
 
-    // Move the element to the target container
+    // If there's a dragged element, append it to the target container
     if (currentDraggedElement) {
         targetContainer.appendChild(currentDraggedElement);
+
+        // Get the teacher ID from the dragged element's attribute
+        const teacherId = currentDraggedElement.getAttribute('name');
+        // Retrieve any existing teacher IDs stored in the hidden input field
+        const existingIds = teacherIdsInput.value ? teacherIdsInput.value.split(',') : [];
+        
+        // If the teacher ID is not already in the list, add it
+        if (!existingIds.includes(teacherId)) {
+            existingIds.push(teacherId);
+            teacherIdsInput.value = existingIds.join(','); // Update the hidden field with the new list of IDs
+        }
     }
 });
 
-// dragleave event on the target container
+// Handle the dragleave event when dragging leaves the target container
 targetContainer.addEventListener('dragleave', (e) => {
-    // Check if the pointer has completely left the target container
+    // Check if the dragged item left the target container
     if (!e.relatedTarget || !targetContainer.contains(e.relatedTarget)) {
+        // If the dragged element is still in the target container, move it back to the source container
         if (currentDraggedElement && targetContainer.contains(currentDraggedElement)) {
-            // Return the element to the source container
-            sourceContainer.querySelector('ul').appendChild(currentDraggedElement);
+            sourceContainer.querySelector('ul').appendChild(currentDraggedElement); // Append the dragged item back to the source container
             targetContainer.classList.remove('drag-over');
 
-            // Restore the helper text if the target container is empty
+            // If no elements are left in the target container, add helper text
             if (!targetContainer.querySelector('.draggable')) {
                 const helperText = document.createElement('p');
                 helperText.className = 'text-muted';
@@ -65,7 +72,7 @@ targetContainer.addEventListener('dragleave', (e) => {
     }
 });
 
-// dragover event on the source container (to return elements)
+// Prevent the default behavior when dragging over the source container
 sourceContainer.addEventListener('dragover', (e) => {
-    e.preventDefault();
+    e.preventDefault(); // Allow dragging over the source container (required for drag events)
 });

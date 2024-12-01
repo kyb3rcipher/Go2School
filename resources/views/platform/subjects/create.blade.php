@@ -24,16 +24,19 @@
     </ol>
 </nav>
 
-<form>
+<form action="{{ route('subjects.store') }}" method="POST">
+    @csrf
+    <input type="hidden" name="teacher_ids" id="teacher-ids">
+
     <div class="col-3 mb-3">
         <label for="inputPassword5" class="form-label">Name:</label>
-        <input type="text" class="form-control">
+        <input type="text" class="form-control" name="name">
     </div>
 
     <div class="col-3 mb-3">
         <label for="inputPassword5" class="form-label">Prefeer grade:</label>
-        <select class="form-select" aria-label="Default select example">
-            <option selected disabled>Open this select menu</option>
+        <select class="form-select" name="prefeer_grade">
+            <option selected disabled>Select grade</option>
             <option value="1">1°</option>
             <option value="2">2°</option>
             <option value="3">3°</option>
@@ -56,7 +59,7 @@
 
                 <ul class="list-unstyled mt-4">
                     @foreach ($teachers as $teacher)
-                        <li class="d-flex align-items-center mb-3 text-dark draggable" draggable="true" id="item-1">
+                        <li class="d-flex align-items-center mb-3 text-dark draggable" draggable="true" id="item-1" name="{{ $teacher->id }}">
                             <img src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?auto=format&w=80&h=80&q=60&fit=facearea&facepad=3" 
                                 class="rounded-circle me-3" alt="Nicholas North" width="40" height="40">
                             <span>{{ $teacher->name }} {{ $teacher->last_name }}</span>
@@ -77,4 +80,20 @@
         </div>
     </div>
 </form>
+
+<script>
+    window.launchSwal = () => {
+        Swal.fire({
+            title: 'Success!',
+            text: 'The subject has been created successfully.',
+            icon: 'success',
+        });
+    };
+
+    @if (session('success'))
+    document.addEventListener('DOMContentLoaded', () => {
+        window.launchSwal();
+    });
+    @endif
+</script>
 @endsection
