@@ -7,7 +7,7 @@
     }
 
     #target-container.drag-over {
-        border: 2px dashed #FFA43B;
+        border: 2px dashed var(--primary);
         border-radius: 3px;
     }
 </style>
