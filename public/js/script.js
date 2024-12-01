@@ -43,7 +43,8 @@ function toggleSideBarSmall() {
     }
 }
 
-window.addEventListener('DOMContentLoaded', function () {
+
+function initializeScript() {
     changeSideBar();
     toggleSideBarSmall();
     document.getElementById('sidebarSmallToggleTop').addEventListener('click', toggleSideBarSmall);
@@ -63,4 +64,6 @@ window.addEventListener('DOMContentLoaded', function () {
         sideBarSmall.classList.add('d-flex');
         sideBarSmall.classList.remove('d-none');
     });
-});
+}
+document.addEventListener('livewire:navigated', initializeScript);
+window.addEventListener('DOMContentLoaded', initializeScript);
