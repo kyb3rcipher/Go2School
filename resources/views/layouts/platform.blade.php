@@ -39,7 +39,7 @@
         <ul class="nav nav-pills flex-column mb-auto">
             <li class="nav-item"> <a href="/platform" @class(['nav-link', 'active' => request()->routeIs('platform-index'), 'link-body-emphasis']) wire:navigate> <i class="bi bi-house me-2"></i> Home</a> </li>
             <li> <a href="/platform/students" @class(['nav-link','active' => request()->routeIs('students*'), 'link-body-emphasis']) wire:navigate> <i class="bi bi-people me-2"></i> Students</a> </li>
-            <li> <a href="{{ route('teachers.index') }}" @class((['nav-link', 'active' => request()->routeIs('teachers*'), 'link-body-emphasis'])) wire:navigate> <i class="bi bi-person-video3 me-2"></i> Teachers</a> </li>
+            <li> <a href="{{ route('teachers.index') }}" @class((['nav-link', 'active' => request()->routeIs('teachers*') || request()->routeIs('subjects*'), 'link-body-emphasis'])) wire:navigate> <i class="bi bi-person-video3 me-2"></i> Teachers</a> </li>
             <li> <a href="#" class="nav-link link-body-emphasis"> <i class="bi bi-book me-2"></i> Library </a> </li>
         </ul>
 
