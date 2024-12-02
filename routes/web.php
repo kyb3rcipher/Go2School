@@ -34,8 +34,10 @@ Route::delete('/platform/teachers/{id}', [TeacherController::class, 'destroy'])-
 
 
 //Library
+Route::resource('/platform/library', LibraryController::class)->except('show');
 Route::get('/platform/library/list', [LibraryController::class, 'list'])->name('library.list');
 Route::get('/platform/library/create', [LibraryController::class, 'create'])->name('library.create');
 Route::post('/platform/library/store', [LibraryController::class, 'store'])->name('library.store');
-Route::get('/platform/library/edit/{id}', [TeacherController::class, 'edit'])->name('library.edit');
-Route::delete('/platform/library/{id}', [TeacherController::class, 'destroy'])->name('library.destroy');
+Route::get('/platform/library/edit/{id}', [LibraryController::class, 'edit'])->name('library.edit');
+Route::put('/platform/library/update/{id}', [LibraryController::class, 'update'])->name('library.update');
+Route::delete('/platform/library/{id}', [LibraryController::class, 'destroy'])->name('library.destroy');

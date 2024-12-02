@@ -26,15 +26,30 @@ class LibraryController extends Controller
         $newBook->gender = $request->gender;
         $newBook->save();
 
-        return ("hello");
+        return redirect()->route('library.list')->with('success', true);
     }
 
     public function edit($id) {
-        return("Hello");
+        $book = Library::find($id);
+        return view('platform.library.edit', compact('book', 'id'));
     }
 
     public function update(Request $request, $id) {
-        return("Hello");
+        $book = Library::find($id);
 
+        $book->title = $request->input('title');
+        $book->author = $request->input('author');
+        $book->resume = $request->input('resume');
+        $book->gender = $request->input('gender');
+
+        $book->save();
+
+        return redirect('/platform/library/list');
+    }
+
+    public function destroy($id) {
+        $book = Library::find($id);
+        $book->delete();
+        return redirect('/platform/library/list');
     }
 }
