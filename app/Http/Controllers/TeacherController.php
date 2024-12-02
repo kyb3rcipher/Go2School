@@ -9,8 +9,10 @@ use Illuminate\Http\Request;
 class TeacherController extends Controller
 {
     public function index() {
+        $teachers = Teacher::all();
         $classrooms = Classroom::all();
-        return view('platform.teachers.index', compact('classrooms'));
+
+        return view('platform.teachers.index', compact('teachers', 'classrooms'));
     }
 
     public function list() {

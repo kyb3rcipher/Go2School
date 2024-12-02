@@ -2,6 +2,13 @@
 
 @section('content')
 <h1 class="h3 mb-3 text-gray-800"><i class="bi bi-journal-bookmark-fill h2"></i> Subjects</h1>
+<nav>
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="{{ route('platform-index') }}" wire:navigate>Home</a></li>
+        <li class="breadcrumb-item"><a href="{{ route('teachers.index') }}" wire:navigate><i class="bi bi-person-lines-fill me-2"></i>Teachers</a></li>
+        <li class="breadcrumb-item active">Subjects</li>
+    </ol>
+</nav>
 
 <h6>Filter by:</h6>
 <div class="mb-4 mt-4">
