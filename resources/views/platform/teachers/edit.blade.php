@@ -80,7 +80,7 @@
     window.launchSwal = () => {
         Swal.fire({
             title: 'Success!',
-            text: 'The teacher has been added successfully.',
+            text: 'The teacher has been edited successfully.',
             icon: 'success',
         });
     };

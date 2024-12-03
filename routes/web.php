@@ -4,6 +4,7 @@ use App\Http\Controllers\StudentController;
 use App\Http\Controllers\SubjectController;
 use App\Http\Controllers\TeacherController;
 use App\Http\Controllers\GroupController;
+use App\Http\Controllers\LibraryController;
 use Illuminate\Support\Facades\Route;
 
 Route::view('/', 'landing-home.index');
@@ -30,3 +31,13 @@ Route::resource('/platform/teachers', TeacherController::class)->except('show');
 Route::get('/platform/teachers/list/view/{id}', [TeacherController::class, 'view'])->name('teachers.view');
 Route::get('/platform/teachers/edit/{id}', [TeacherController::class, 'edit'])->name('teachers.edit');
 Route::delete('/platform/teachers/{id}', [TeacherController::class, 'destroy'])->name('teachers.destroy');
+
+
+//Library
+Route::resource('/platform/library', LibraryController::class)->except('show');
+Route::get('/platform/library/list', [LibraryController::class, 'list'])->name('library.list');
+Route::get('/platform/library/create', [LibraryController::class, 'create'])->name('library.create');
+Route::post('/platform/library/store', [LibraryController::class, 'store'])->name('library.store');
+Route::get('/platform/library/edit/{id}', [LibraryController::class, 'edit'])->name('library.edit');
+Route::put('/platform/library/update/{id}', [LibraryController::class, 'update'])->name('library.update');
+Route::delete('/platform/library/{id}', [LibraryController::class, 'destroy'])->name('library.destroy');
