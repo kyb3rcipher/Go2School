@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: var(--body);
+}
+
+.btn {
+    border-radius: 8px;
+}
+
+.btn-primary, .btn-outline-secondary {
+    padding: 12px 20px;
+}
+
+.btn-outline-secondary {
+    border: 1px solid var(--gray-2);
+    color: var(--black);
+}
+.btn-outline-secondary:hover {
+    background-color: var(--gray-2);
+    border: 1px solid var(--gray-2);
+    color: var(--black);
+}
+
+/* Header */
+header .navbar .btn-outline-secondary {
+    border: 1px solid var(--gray-2);
+    color: var(--black);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    padding: 10px 16px;
+}
+
+header .navbar {
+    padding: 32px 0;
+}
+
+header .nav-link {
+    margin-left: 41px;
+    font-size: 16px;
+    color: var(--gray-1);
+}
+
+header .navbar-nav .nav-link.active {
+    font-weight: bold;
+    color: var(--black);
+}
+
+.buttons {
+    padding-top: 69px;
+}
+.buttons .btn {
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 24px;
+}
+
+.text-header h2 {
+    font-size: 42px;
+    padding: 27px 0;
+}
+
+/* HERO SECTION */
+section.hero {
+    padding: 80px 0;
+}
+
+section.hero .text {
+    font-weight: 800;
+    font-size: 48px;
+    line-height: 73px;
+    color: var(--black);
+}
+
+@keyframes bounce {
+    0% { transform: translateY(-10px)scaleY(.8) }
+    100% { transform: translateY(10px)scaleY(1) }
+}
+
+section.hero #down-arrow {
+    position: absolute;
+    bottom: 35px;
+    right: 50%;
+    animation: bounce 1s cubic-bezier(0.5, 0.05, 1, 0.5) infinite alternate;
+    transform-origin: right bottom
+}
+section.hero #down-arrow div {
+    display: block;
+    width: 15px;
+    height: 15px;
+    transform: rotate(45deg);
+    border-right: 3px solid black;
+    border-bottom: 3px solid black;
+    margin: 0 0 3px 10px
+}
+
+/* FEATURES section */
+section.features .text-header {
+    margin-bottom: 30px;
+}
+
+/* INFORMATION section */
+section.information {
+    padding: 100px 0;
+}
+
+section.information .text-header h2 {
+    font-weight: 700;
+    line-height: 48px;
+    color: var(--black);
+}
+
+section.information .text-header p {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 28px;
+    color: var(--gray-1);
+    padding: 27px 0;
+}
+
+section.information .icons {
+    padding: 27px 0;
+}
+
+section.information h5 {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 24px;
+    color: var(--black);
+    padding-bottom: 18px;
+}
+
+section.information .desc p {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 22px;
+    color: var(--gray-1);
+    max-width: 284px;
+    margin: 0 auto;
+}
+
+/* INFORMATION section */
+section.information .text-information {
+    padding: 134px 0;
+}
+
+section.information h5 {
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 48px;
+    color: var(--black);
+}
+
+section.information p {
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 28px;
+    color: var(--gray-1);
+    padding-top: 20px;
+}
+
+section.information .info-1 {
+    padding: 183px 0;
+}
+
+/* FAQs section */
+section.faqs .text-header h2 {
+    text-decoration: underline;
+    text-decoration-style: wavy;
+    text-decoration-color: var(--primary);
+}
+
+/* FOOTER */
+footer {
+    padding-top: 90px;
+}
+
+footer a {
+    font-weight: bold;
+    font-size: 14px;
+    color: var(--black);
+    line-height: 18px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 576px) {
+    .buttons .btn {
+        display: block;
+        margin: 1rem 0;
+    }
+
+    .buttons .ms-3 {
+        margin-left: 0 !important;
+    }
+    
+    /* Navbar */
+    header .navbar {
+        padding: 20px 0;
+    }
+
+    header .nav-link {
+        margin-left: 0;
+    }
+
+    /* Footer */
+    footer {
+        text-align: center;
+    }
+
+    footer #logo {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 576px) {
+    section.hero,
+    section.setup,
+    section.information {
+        text-align: center;
+    }
+
+    /* HERO section */
+    section.hero img {
+        padding-top: 2.5rem;
+    }
+
+    section.hero .text {
+        font-weight: 800;
+        font-size: 38px;
+        line-height: 53px;
+    }
+
+    /* SETUP section */
+    section.setup {
+        padding: 50px 0;
+    }
+}
