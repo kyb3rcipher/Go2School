@@ -32,7 +32,7 @@
                     <li class="nav-item"><a class="nav-link" href="/#faqs">FAQs</a></li>
                     <li class="nav-item me-5"><a class="nav-link" href="{{ route('home.about') }}" wire:navigate>About</a></li>
                 </ul>
-                <a href="{{-- route('login') --}}" wire:navigate class="btn btn-outline-secondary shadow-sm d-sm d-block">Platform</a>
+                <a href="{{ route('login') }}" wire:navigate class="btn btn-outline-secondary shadow-sm d-sm d-block">Platform</a>
           </div>
         </div>
     </nav>

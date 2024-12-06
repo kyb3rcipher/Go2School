@@ -9,7 +9,7 @@
             <div class="col-md-6">
                 <div class="text">Modernize your school and keep better control</div>
                 <div class="buttons">
-                    <a href="/platform" class="btn btn-primary">Go to Platform</a>
+                    <a href="{{ route('login') }}" class="btn btn-primary">Go to Platform</a>
                     <a href="#" class="btn btn-outline-secondary ms-3">Test a preview</a>
                 </div>
             </div>
