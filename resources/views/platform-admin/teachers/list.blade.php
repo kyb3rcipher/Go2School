@@ -25,7 +25,7 @@
             <tr>
                 <td>
                     @if (isset($teacher->photo))
-                        <img src="#" class="rounded" alt="Profile picture" height="30" width="30">
+                    <img src="{{ asset('storage/' . $teacher->photo) }}" height="30" width="30" class="card-img-top rounded-circle" alt="Teacher Photo">
                     @else
                         <i class="bi bi-person-square"></i>
                     @endif

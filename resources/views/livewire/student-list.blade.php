@@ -3,7 +3,7 @@
         @foreach ($students as $student)
         <div class="col d-flex justify-content-center">
             <div class="card" style="width: 18rem;">
-                <img src="https://media.istockphoto.com/id/1386479313/photo/happy-millennial-afro-american-business-woman-posing-isolated-on-white.jpg?s=612x612&w=0&k=20&c=8ssXDNTp1XAPan8Bg6mJRwG7EXHshFO5o0v9SIj96nY=" class="card-img-top" alt="...">
+                <img src="{{ $student->photo ? asset('storage/' . $student->photo) : '/images/icons/profiles/profile-' . rand(1, 4) . '.svg' }}" height="155" class="card-img-top" alt="Student Photo">
                 <div class="card-body">
                     <h5 class="card-title">{{ $student->name }} {{ $student->last_name }}</h5>
                     <p class="card-text">

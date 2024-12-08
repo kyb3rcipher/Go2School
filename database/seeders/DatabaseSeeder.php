@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Storage;
 use App\Models\Admin;
 use App\Models\Group;
 use App\Models\Carrer;
@@ -15,6 +16,9 @@ class DatabaseSeeder extends Seeder
 {
     public function run(): void
     {
+        // Clear public storange
+        $this->clearPublicStorage();
+
         Admin::create([
             'email' => "admin@go2school.com",
             'password' => Hash::make('password'),
@@ -44,5 +48,13 @@ class DatabaseSeeder extends Seeder
         Teacher::factory(50)->create();
 
         Student::factory(100)->create();
+    }
+
+    private function clearPublicStorage(): void {
+        Storage::disk('public')->deleteDirectory('/');
+
+        // Recreate dirs
+        Storage::disk('public')->makeDirectory('teacher/photos');
+        Storage::disk('public')->makeDirectory('students/photos');
     }
 }
