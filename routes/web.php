@@ -12,3 +12,6 @@ Route::view('/about', 'about')->name('home.about');
 Route::get('/login', [AuthController::class, 'login'])->name('login');
 Route::post('/auth', [AuthController::class, 'auth'])->name('auth');
 Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
+
+// Platform Admin
+Route::view('/platform', 'platform-admin.index')->name('platform-admin.index');
