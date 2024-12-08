@@ -6,6 +6,7 @@ use App\Http\Controllers\PlatformAdmin\StudentController;
 use App\Http\Controllers\PlatformAdmin\GroupController;
 use App\Http\Controllers\PlatformAdmin\TeacherController;
 use App\Http\Controllers\PlatformAdmin\ClassroomController;
+use App\Http\Controllers\PlatformAdmin\SubjectController;
 
 // Home
 Route::view('/', 'index')->name('home');
@@ -36,3 +37,5 @@ Route::get('/platform/teachers/list', [TeacherController::class, 'list'])->name(
 //classroms
 Route::get('/platform/classrooms/list', [ClassroomController::class, 'list'])->name('classrooms.list');
 Route::delete('/platform/classrooms/{id}', [ClassroomController::class, 'destroy'])->name('classrooms.destroy');
+//subjects
+Route::resource('/platform/teachers/subjects', SubjectController::class);

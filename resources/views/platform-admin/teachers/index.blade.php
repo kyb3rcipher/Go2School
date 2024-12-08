@@ -43,7 +43,7 @@
                 <div class="card-body">
                     <h5 class="card-title">Subjects:</h5>
                     <p class="card-text">School subjects to be assigned to teachers.</p>
-                    <a href="{{-- route('subjects.index') --}}" class="btn btn-primary btn-icon-split" wire:navigate><span class="icon text-white-50"><i class="bi bi-journals h5"></i></span> <span class="text">Go to subjects</span></a>
+                    <a href="{{ route('subjects.index') }}" class="btn btn-primary btn-icon-split" wire:navigate><span class="icon text-white-50"><i class="bi bi-journals h5"></i></span> <span class="text">Go to subjects</span></a>
                 </div>
             </div>
         </div>
