@@ -26,7 +26,7 @@
 
     <div class="col">
         <div class="p-3 bg-white border border-3 rounded-3 h-100" style="margin-top: 23px;">
-            <h3><a href="{{-- route('students.list') --}}" class="link-underline link-underline-opacity-0"  wire:navigate><i class="bi bi-person-fill h2"></i> Students</a></h3>
+        <h3><a href="{{ route('students.list') }}" class="link-underline link-underline-opacity-0"  wire:navigate><i class="bi bi-person-fill h2"></i> Students</a></h3>
 
             <div>
                 <span class="ps-2 me-2">Students: <code>{{-- $totalStudents --}}</code></span>
@@ -35,16 +35,15 @@
             </div>
                 <div class="mt-3 d-flex align-items-center">
                     @php
-                    /*
-                        $maleStudentPercentage = round(($maleStudents / $totalStudents), 2) * 100;
+                        $maleStudentPercentage = ($totalStudents > 0) ? round(($maleStudents / $totalStudents), 2) * 100 : '0';
                         $maleStudentPercentageStyle = "style='background-color: #3568E9; width: $maleStudentPercentage%'";
 
-                        $femaleStudentPercentage = round((($totalStudents - $maleStudents)/$totalStudents), 2) * 100;
-                        $femaleStudentPercentageStyle = "style='background-color: #3B96FF; width: $femaleStudentPercentage%'";*/
+                        $femaleStudentPercentage = ($totalStudents > 0) ? round((($totalStudents - $maleStudents)/$totalStudents), 2) * 100 : '0';
+                        $femaleStudentPercentageStyle = "style='background-color: #3B96FF; width: $femaleStudentPercentage%'";
                     @endphp
                     <div class="col progress">
-                        <div class="progress-bar progress-bar-striped" role="progressbar" {{--$maleStudentPercentageStyle--}} aria-valuenow="{{--$maleStudentPercentage--}}" aria-valuemin="0" aria-valuemax="100">{{$maleStudentPercentage ?? 0}}%</div>
-                        <div class="progress-bar progress-bar-striped" role="progressbar" {{--$femaleStudentPercentageStyle--}} aria-valuenow="{{--$femaleStudentPercentage--}}" aria-valuemin="0" aria-valuemax="100">{{$femaleStudentPercentage ?? 0}}%</div>
+                        <div class="progress-bar progress-bar-striped" role="progressbar" {{!! $maleStudentPercentageStyle !!}} aria-valuenow="{{ $maleStudentPercentage }}" aria-valuemin="0" aria-valuemax="100">{{$maleStudentPercentage ?? 0}}%</div>
+                        <div class="progress-bar progress-bar-striped" role="progressbar" {{!! $femaleStudentPercentageStyle !!}} aria-valuenow="{{ $femaleStudentPercentage }}" aria-valuemin="0" aria-valuemax="100">{{$femaleStudentPercentage ?? 0}}%</div>
                     </div>
                 </div>
             

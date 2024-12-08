@@ -14,6 +14,8 @@ Route::get('/login', [AuthController::class, 'login'])->name('login');
 Route::post('/auth', [AuthController::class, 'auth'])->name('auth');
 Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
-// Platform Admin
+/***** Platform Admin *****/
 Route::view('/platform', 'platform-admin.index')->name('platform-admin.index');
+// Students
 Route::resource('/platform/students', StudentController::class)->except(['show']);
+Route::get('/platform/students/list', [StudentController::class, 'list'])->name('students.list');
