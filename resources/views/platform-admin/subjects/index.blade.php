@@ -10,43 +10,7 @@
     </ol>
 </nav>
 
-<h6>Filter by:</h6>
-<div class="mb-4 mt-4">
-    <form class="row" action="#" method="GET">
-        <div class="col">
-            <select onchange="" class="form-select" aria-label="Class" name="class_id" required>
-                <option selected disabled>Select a grade</option>
-            </select>
-        </div>
-
-        <div class="col">
-            <button type="submit" class="btn btn-primary"><i class="bi bi-arrow-counterclockwise"></i> Load List</button>
-            <a href="{{ route('subjects.create') }}" class="btn btn-success"><i class="bi bi-journal-plus h5"></i> Create subject</a>
-        </div>
-    </form>
-</div>
-<table class="table table-striped">
-    <thead>
-      <tr>
-        <th scope="col">Name</th>
-        <th scope="col">Grade</th>
-        <th scope="col">Teachers</th>
-        <th scope="col">Actions</th>
-      </tr>
-    </thead>
-    <tbody>
-        @foreach ($subjects as $subject)
-            <tr data-subject-id="{{ $subject->id }}">
-                <td>{{ $subject->name }}</td>
-                <td>{{ $subject->prefeer_grade }}°</td>
-                <td></td>
-                <td>
-                    @livewire('subject-actions', ['subjectID' => $subject->id], key($subject->id))
-                </td>
-            </tr>
-        @endforeach
-    </tbody>
-</table>
+@livewire('subjects')
 
 <script>
 document.addEventListener('livewire:init', () => {
