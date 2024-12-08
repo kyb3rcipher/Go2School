@@ -8,6 +8,8 @@ use App\Models\Admin;
 use App\Models\Group;
 use App\Models\Carrer;
 use App\Models\Student;
+use App\Models\Teacher;
+use App\Models\Classroom;
 
 class DatabaseSeeder extends Seeder
 {
@@ -34,6 +36,13 @@ class DatabaseSeeder extends Seeder
             'carreer' => 'Programation',
         ]);
         
+        for ($i = 1; $i <= 30; $i++) {
+            Classroom::create([
+                'name' => "$i",
+            ]);
+        }
+        Teacher::factory(50)->create();
+
         Student::factory(100)->create();
     }
 }
