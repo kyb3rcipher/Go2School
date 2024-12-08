@@ -29,13 +29,17 @@ class StudentController extends Controller
         
         return view('platform-admin.students.list', compact('students'));
     }
+    public function view($id) {
+        $student = Student::find($id);
+        
+        return view('platform-admin.students.view', compact('student'));
+    }
 
     public function create() {
         $groups = Group::all();
         
         return view('platform-admin.students.create', compact('groups'));
     }
-
     public function store(Request $request) {
         $newStudent = new Student();
 

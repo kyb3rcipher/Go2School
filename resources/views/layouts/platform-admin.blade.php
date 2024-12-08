@@ -11,7 +11,7 @@
     <link rel="icon" type="image/x-icon" href="/images/logo.svg">
 
     <!-- Style -->
-    {{--@livewireStyles--}}
+    @livewireStyles
     @vite(['resources/scss/app.scss', 'resources/js/app.js'])   {{-- Laravel resources (boostrap) --}}
     <link rel="stylesheet" href="/css/global.css">
     <link rel="stylesheet" href="/css/platform-admin.css">
@@ -278,7 +278,7 @@
     </footer>
 </div>
 
-{{--@livewireScripts--}}
+@livewireScripts
 <script src="/js/script.js"></script>
 @stack('js')
 </body>

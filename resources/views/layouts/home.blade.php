@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="/css/global.css">
     <link rel="stylesheet" href="/css/home.css">
     @stack('css')
-    {{--@livewireStyles--}} <!-- Livewire styles -->
+    @livewireStyles <!-- Livewire styles -->
 </head>
 <body>
 <header>
@@ -89,6 +89,6 @@
 
 @stack('js')
 <!-- Livewire scripts -->
-{{--@livewireScripts--}}
+@livewireScripts
 </body>
 </html>
