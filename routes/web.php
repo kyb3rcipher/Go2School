@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\PlatformAdmin\StudentController;
 
 // Home
 Route::view('/', 'index')->name('home');
@@ -15,3 +16,4 @@ Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
 // Platform Admin
 Route::view('/platform', 'platform-admin.index')->name('platform-admin.index');
+Route::resource('/platform/students', StudentController::class)->except(['show']);
