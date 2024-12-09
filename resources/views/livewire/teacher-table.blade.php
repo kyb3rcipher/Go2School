@@ -2,7 +2,7 @@
     <table class="table table-responsive">
         <thead>
             <tr>
-                <th scope="col"><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"></th>
+                <th scope="col">Select</th>
                 <th scope="col">Last Name</th>
                 <th scope="col">First Name</th>
                 <th scope="col">Phone</th>
@@ -11,7 +11,7 @@
         <tbody>
             @foreach ($teachers as $teacher)
                 <tr>
-                    <td><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"></td>
+                    <td><input class="form-check-input" type="radio" name="selectedTeacher" value="{{ $teacher->id }}" id="teacher{{ $teacher->id }}"></td>
                     <td>{{ $teacher->last_name }}</td>
                     <td>{{ $teacher->name }}</td>
                     <td>{{ $teacher->phone }}</td>
