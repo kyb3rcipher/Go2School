@@ -4,6 +4,7 @@
     <link rel="stylesheet" href="/css/groups.css">
 @endpush
 @push('js')
+    <script>const teachers = @json($teachers);</script>
     <script src="/js/groups.js"></script>
 @endpush
 
@@ -118,9 +119,9 @@
             
                             <div class="d-flex gap-4 mb-2">
                                 <select name="" id="source" size="5" class="form-select" multiple>
-                                    @foreach ($carrers as $carrer)
-                                        <option value="{{ $carrer->name }}">
-                                            {{ $carrer->name }}
+                                    @foreach ($subjects as $subject)
+                                        <option value="{{ $subject->name }}">
+                                            {{ $subject->name }}
                                         </option>
                                     @endforeach
                                 </select>

@@ -22,10 +22,20 @@ function addSubject(isMovingRight) {
             defaultOption.textContent = 'Select subject teacher';
             select.appendChild(defaultOption);
 
+            // Add teacher options
+            teachers.forEach(teacher => {
+                const teacherOption = document.createElement('option');
+                teacherOption.value = teacher.id; // Use teacher ID as the value
+                teacherOption.textContent = teacher.name; // Use teacher name as the display text
+                select.appendChild(teacherOption);
+            });
+
+            // Append the text and select to the <li>
             li.appendChild(textNode);
             li.appendChild(select);
             subjectsList.appendChild(li);
-        } else {    // Remove the <li> from the subjects-teachers list
+        } else {
+            // Remove the <li> corresponding to the subject
             const liToRemove = Array.from(subjectsList.children).find(li => li.textContent.includes(option.text));
 
             if (liToRemove) {
