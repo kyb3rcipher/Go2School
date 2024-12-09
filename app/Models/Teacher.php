@@ -3,10 +3,13 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Contracts\Auth\Authenticatable as AuthenticatableContract;
+use Illuminate\Auth\Authenticatable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
-class Teacher extends Model
+class Teacher extends Model implements AuthenticatableContract
 {
+    use Authenticatable;
     use HasFactory;
 
     protected $fillable = [

@@ -7,6 +7,8 @@ use App\Http\Controllers\PlatformAdmin\GroupController;
 use App\Http\Controllers\PlatformAdmin\TeacherController;
 use App\Http\Controllers\PlatformAdmin\ClassroomController;
 use App\Http\Controllers\PlatformAdmin\SubjectController;
+// Teacher
+use App\Http\Controllers\PlatformTeacher\ProfileController;
 
 // Home
 Route::view('/', 'index')->name('home');
@@ -39,3 +41,9 @@ Route::get('/platform/classrooms/list', [ClassroomController::class, 'list'])->n
 Route::delete('/platform/classrooms/{id}', [ClassroomController::class, 'destroy'])->name('classrooms.destroy');
 //subjects
 Route::resource('/platform/teachers/subjects', SubjectController::class);
+
+/***** Platform Teacher *****/
+Route::view('/teacher', 'platform-teacher.index')->name('platform-teacher.index');
+Route::get('/teacher/profile', [ProfileController::class, 'index'])->name('platform-teacher.profile.index');
+Route::get('/teacher/profile/edit', [ProfileController::class, 'edit'])->name('platform-teacher.profile.edit');
+Route::post('/teacher/profile/update', [ProfileController::class, 'update'])->name('platform-teacher.profile.update');

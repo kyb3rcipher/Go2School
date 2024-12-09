@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use App\Models\Admin;
+use App\Models\Teacher;
 
 class AuthController extends Controller
 {
@@ -13,6 +14,8 @@ class AuthController extends Controller
         // Check if user is already authenticated
         if (Auth::check()) {
             return redirect('/platform');
+        } elseif (Auth::user() instanceof Teacher) {
+            return redirect('/teacher');
         }
 
         return view('login');
@@ -26,6 +29,12 @@ class AuthController extends Controller
         if ($admin && Hash::check($credentials['password'], $admin->password)) {
             Auth::login($admin, $remember);
             return redirect()->intended('/platform');
+        }
+
+        $teacher = Teacher::where('email', $credentials['email'])->first();
+        if ($teacher && Hash::check($credentials['password'], $teacher->password)) {
+            Auth::login($teacher, $remember);
+            return redirect()->intended('/teacher');
         }
 
         // Return back with error
