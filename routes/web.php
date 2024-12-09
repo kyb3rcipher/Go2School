@@ -31,19 +31,23 @@ Route::get('/platform/students/list/view/{id}', [StudentController::class, 'view
 Route::get('/platform/students/groups', [GroupController::class, 'index'])->name('students.groups.index');
 
 // Teachers
-Route::resource('/platform/teachers', TeacherController::class)->except('show');
-Route::get('/platform/teachers/list/view/{id}', [TeacherController::class, 'view'])->name('teachers.view');
-Route::get('/platform/teachers/edit/{id}', [TeacherController::class, 'edit'])->name('teachers.edit');
-Route::delete('/platform/teachers/{id}', [TeacherController::class, 'destroy'])->name('teachers.destroy');
-Route::get('/platform/teachers/list', [TeacherController::class, 'list'])->name('teachers.list');
-//classroms
-Route::get('/platform/classrooms/list', [ClassroomController::class, 'list'])->name('classrooms.list');
-Route::delete('/platform/classrooms/{id}', [ClassroomController::class, 'destroy'])->name('classrooms.destroy');
-//subjects
-Route::resource('/platform/teachers/subjects', SubjectController::class);
+Route::middleware('role:admin')->group(function () {
+    Route::resource('/platform/teachers', TeacherController::class)->except('show');
+    Route::get('/platform/teachers/list/view/{id}', [TeacherController::class, 'view'])->name('teachers.view');
+    Route::get('/platform/teachers/edit/{id}', [TeacherController::class, 'edit'])->name('teachers.edit');
+    Route::delete('/platform/teachers/{id}', [TeacherController::class, 'destroy'])->name('teachers.destroy');
+    Route::get('/platform/teachers/list', [TeacherController::class, 'list'])->name('teachers.list');
+    //classroms
+    Route::get('/platform/classrooms/list', [ClassroomController::class, 'list'])->name('classrooms.list');
+    Route::delete('/platform/classrooms/{id}', [ClassroomController::class, 'destroy'])->name('classrooms.destroy');
+    //subjects
+    Route::resource('/platform/teachers/subjects', SubjectController::class);
+});
 
 /***** Platform Teacher *****/
-Route::view('/teacher', 'platform-teacher.index')->name('platform-teacher.index');
-Route::get('/teacher/profile', [ProfileController::class, 'index'])->name('platform-teacher.profile.index');
-Route::get('/teacher/profile/edit', [ProfileController::class, 'edit'])->name('platform-teacher.profile.edit');
-Route::post('/teacher/profile/update', [ProfileController::class, 'update'])->name('platform-teacher.profile.update');
+Route::middleware('role:teacher')->group(function () {
+    Route::view('/teacher', 'platform-teacher.index')->name('platform-teacher.index');
+    Route::get('/teacher/profile', [ProfileController::class, 'index'])->name('platform-teacher.profile.index');
+    Route::get('/teacher/profile/edit', [ProfileController::class, 'edit'])->name('platform-teacher.profile.edit');
+    Route::post('/teacher/profile/update', [ProfileController::class, 'update'])->name('platform-teacher.profile.update');
+});
